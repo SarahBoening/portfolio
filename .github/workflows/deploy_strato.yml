@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload per SFTP zu Strato
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.STRATO_HOST }}
           username: ${{ secrets.STRATO_USERNAME }}
+          server: ${{ secrets.STRATO_HOST }}
           password: ${{ secrets.STRATO_PASSWORD }}
-          protocol: sftp
           port: 22
-          local-dir: ./          # Ordner mit deinen Website-Dateien im Repo
-          server-dir: /portfolio/     # Zielordner auf Strato, anpassen an dein Stammverzeichnis
+          ssh_private_key: ''
+          local_path: './*'
+          remote_path: '/portfolio/'
