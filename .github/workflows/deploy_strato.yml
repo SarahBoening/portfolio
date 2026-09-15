@@ -21,3 +21,4 @@ jobs:
           ssh_private_key: ''
           local_path: './*'
           remote_path: '/portfolio/'
+          sftp_only: true
