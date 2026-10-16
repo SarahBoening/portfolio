@@ -365,7 +365,7 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .hero__visual { flex: 1 1 380px; min-width: 0; position: relative; min-height: 560px; display: grid; place-items: center; }
 .portrait { width: min(420px, 92%); transform: rotate(-2deg); border-radius: 48px 40px 52px 36px; }
 .portrait .core { aspect-ratio: 1 / 1.1; border-radius: 40px 32px 44px 28px; place-items: center; justify-content: center; align-items: center; position: relative; overflow: hidden; }
-.portrait__initials { font-family: var(--font-display); font-weight: 600; font-size: clamp(88px, 10vw, 140px); color: var(--accent); position: relative; }
+.portrait__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transform: scale(1.1); transform-origin: 50% 45%; }
 .portrait__blob { position: absolute; width: 70%; aspect-ratio: 1.1; background: var(--azure); border-radius: var(--blob-shape); }
 .tag {
   position: absolute; padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1.2;

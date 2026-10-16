@@ -39,7 +39,6 @@ Wenn du Header oder Footer änderst, bitte in allen zehn Seiten.
 
 ## Offen (im Code als `TODO` markiert)
 
-- [ ] Illustration für den Hero (ersetzt die Initialen „SB“)
 - [ ] Persönlicher Satz im Abschnitt „Über mich“
 - [ ] Nächste Case Study
 - [ ] Ergebnisse des Usability-Tests in der Pfotenfinder-Case-Study
