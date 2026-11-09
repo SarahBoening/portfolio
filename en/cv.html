@@ -60,24 +60,51 @@
       <div class="stack" style="gap:28px">
         <p class="eyebrow">CV</p>
         <h1 id="cv-title" class="display-1" style="max-width:12em;font-size:clamp(46px,6vw,84px)">My common thread, in detail.</h1>
-        <p class="lead">Product designer with 5.5 years of experience in software engineering and data science and 1.5 years in UX research.</p>
+        <p class="lead">Product designer with a technical background: 5.5 years of experience in software engineering and data science. I have always wanted to understand how people work with computers. Today I design interfaces that are genuinely useful and accessible to everyone.</p>
       </div>
     </section>
 
     <div class="container cv-layout relative" style="padding-bottom:var(--section)">
       <div class="cv-main">
+        <section aria-labelledby="proj" class="stack" style="gap:24px;align-items:stretch">
+          <h2 id="proj" class="display-2" style="font-size:clamp(30px,3vw,40px)">Project</h2>
+          <ol class="cv-list">
+            <li class="shell shell--accent reveal"><article class="core">
+              <p class="meta">Since August 2026</p>
+              <h3 class="display-3">Pfotenfinder · Case Study</h3>
+              <p class="muted" style="font-weight:600">Product Design Bootcamp, Digitale Leute School</p>
+              <ul class="list body-2">
+                <li>UX research on rescue animal adoption: 4 interviews (including an adoption coordinator from “Ein Herz für Streuner e.V.”), a survey with 102 participants, desk research</li>
+                <li>Synthesised 40 insights into a persona and HMW: whether everyday life and animal fit together is checked too late</li>
+                <li>Matching concept that compares lifestyle and animal needs early on; lo-fi to hi-fi prototype in Figma incl. design system</li>
+                <li>Usability test with 2 people: flow completed without help, enquiry sent in under a minute</li>
+                <li>Accessibility considered according to WCAG 2.1</li>
+              </ul>
+              <p><a class="btn btn--soft btn--icon" href="projects/pfotenfinder.html">Read the case study <span class="btn__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a></p>
+            </article></li>
+          </ol>
+        </section>
+
         <section aria-labelledby="exp" class="stack" style="gap:24px;align-items:stretch">
           <h2 id="exp" class="display-2" style="font-size:clamp(30px,3vw,40px)">Experience</h2>
           <ol class="cv-list">
+            <li class="shell shell--c reveal"><article class="core">
+              <p class="meta">March to July 2026</p>
+              <h3 class="display-3">Career reorientation</h3>
+              <ul class="list body-2">
+                <li>Career coaching with AVOCONS (May to July 2026) to move from software engineering into product design</li>
+              </ul>
+            </article></li>
             <li class="shell reveal"><article class="core">
               <p class="meta">July 2023 to February 2026</p>
               <h3 class="display-3">Backend Developer</h3>
               <p class="muted" style="font-weight:600">Enginsight GmbH, Jena · IT security</p>
               <ul class="list body-2">
-                <li>Independently developed, deployed and maintained backend services in Scrum, keeping live operations stable</li>
-                <li>Worked closely with UX designers to increase customer satisfaction</li>
-                <li>Built up architecture and documentation for maintainability, faster onboarding and customer support</li>
-                <li>Mentored junior staff, planned tasks and ran customer support sessions</li>
+                <li>Close collaboration with UX: reviewed wireframes for a roadmap feature from a technical perspective and involved UX in architecture discussions</li>
+                <li>Ran customer support sessions: narrowed down hard-to-reproduce bugs together with customers and fixed them quickly</li>
+                <li>Cut idle CPU load from often close to 100 % to 1 %: more stable services and noticeably faster results in the UI</li>
+                <li>Built up architecture and documentation for the services: fewer questions from support, faster answers for customers</li>
+                <li>Developed, deployed and maintained 4 backend services in a Scrum team and mentored a junior team member</li>
               </ul>
             </article></li>
             <li class="shell shell--b reveal"><article class="core">
@@ -85,20 +112,18 @@
               <h3 class="display-3">Research Associate</h3>
               <p class="muted" style="font-weight:600">Institute of Data Science, German Aerospace Center (DLR), Jena</p>
               <ul class="list body-2">
-                <li>Independently led and coordinated the A-Match project, including user research</li>
-                <li>Planned and wrote project proposals</li>
-                <li>Supervised and supported students</li>
-                <li>Developed and deployed software tools as the technical foundation for further research</li>
+                <li>Designed and ran a user workshop with about 15 participants, including questionnaires, and translated the results into requirements</li>
+                <li>Independently led and coordinated the A-Match project (ontology-based API matching for satellite engineering)</li>
+                <li>Planned and wrote project proposals, supervised students</li>
+                <li>Developed software tools as the technical foundation for follow-up research</li>
               </ul>
             </article></li>
             <li class="shell shell--c reveal"><article class="core">
-              <p class="meta">2018 to 2020, with a break</p>
+              <p class="meta">November 2018 to March 2019, December 2019 to April 2020</p>
               <h3 class="display-3">Student Assistant</h3>
               <p class="muted" style="font-weight:600">Bauhaus-Universität Weimar</p>
               <ul class="list body-2">
-                <li>Graded assignments for “Introduction to Programming” to support learning progress</li>
-                <li>Independently designed and built a GUI to improve tutorials</li>
-                <li>Trained transformer networks on Java source code</li>
+                <li>Independently designed and built a GUI to improve the quality of tutorials</li>
               </ul>
             </article></li>
           </ol>
@@ -108,18 +133,22 @@
           <h2 id="edu" class="display-2" style="font-size:clamp(30px,3vw,40px)">Education</h2>
           <ol class="cv-list" style="gap:14px">
             <li class="panel panel--ink reveal">
-              <p class="meta" style="color:inherit;opacity:.85">August to December 2026 · Digitale Leute School, remote</p>
+              <p class="meta" style="color:inherit;opacity:.85">August 2026 to December 2026 (expected) · Digitale Leute School, remote</p>
               <h3 class="display-3">Product Design Bootcamp</h3>
-              <p class="body-2">UX research and design, lo-fi to hi-fi prototyping, strategy, accessibility, AI-assisted design, vibe coding</p>
+              <p class="body-2">UX research, design and testing, lo-fi to hi-fi prototyping, product strategy and KPIs, design systems, accessibility, AI-assisted design, vibe coding, AI-native product design</p>
             </li>
             <li class="panel panel--b reveal">
-              <p class="meta">2018 to 2020 · Bauhaus-Universität Weimar</p>
+              <p class="meta">April 2018 to June 2020 · Bauhaus-Universität Weimar</p>
               <h3 class="display-3">M.Sc. Computer Science for Digital Media</h3>
               <p class="body-2">Final grade 1.1 (German scale), with distinction</p>
             </li>
             <li class="panel panel--c reveal">
-              <p class="meta">2014 to 2017 · Clausthal University of Technology</p>
+              <p class="meta">October 2014 to November 2017 · Clausthal University of Technology</p>
               <h3 class="display-3">B.Sc. Computer Science</h3>
+            </li>
+            <li class="panel reveal">
+              <p class="meta">August 2005 to June 2013 · Ernst-Moritz-Arndt-Gymnasium, Herzberg am Harz</p>
+              <h3 class="display-3">Abitur (university entrance qualification)</h3>
             </li>
           </ol>
         </section>
@@ -130,13 +159,15 @@
           <div class="core core--azure">
             <h2 id="sk" class="display-3">Skills</h2>
             <ul class="chips" style="font-size:14px">
-              <li style="background:var(--bg)">UX design</li>
-              <li style="background:var(--bg)">UX research &amp; testing</li>
-              <li style="background:var(--bg)">Accessible design</li>
-              <li style="background:var(--bg)">AI-assisted work</li>
-              <li style="background:var(--bg)">Stakeholder communication</li>
-              <li style="background:var(--bg)">Programming &amp; architecture</li>
-              <li style="background:var(--bg)">Planning &amp; organisation</li>
+              <li style="background:var(--bg)">User research</li>
+              <li style="background:var(--bg)">Usability testing</li>
+              <li style="background:var(--bg)">Interviews &amp; surveys</li>
+              <li style="background:var(--bg)">Persona &amp; HMW</li>
+              <li style="background:var(--bg)">Wireframing &amp; prototyping</li>
+              <li style="background:var(--bg)">Interaction design</li>
+              <li style="background:var(--bg)">Accessible design (WCAG)</li>
+              <li style="background:var(--bg)">Agile/Scrum</li>
+              <li style="background:var(--bg)">Technical understanding (frontend &amp; backend)</li>
             </ul>
           </div>
         </section>
@@ -145,7 +176,7 @@
             <h2 id="tools" class="display-3">Tools</h2>
             <dl class="tools">
               <div><dt class="kicker">Design</dt><dd>Figma, Canva, Adobe Photoshop</dd></div>
-              <div><dt class="kicker">AI</dt><dd>Claude incl. Code &amp; Design, ChatGPT, Gemini, Perplexity</dd></div>
+              <div><dt class="kicker">AI</dt><dd>Claude incl. Code &amp; Design, ChatGPT, NotebookLM, Perplexity</dd></div>
               <div><dt class="kicker">Code</dt><dd>HTML, CSS, JavaScript incl. Node.js, Go, Python, Java, SQL and NoSQL databases</dd></div>
               <div><dt class="kicker">Productivity</dt><dd>Miro, Slack, Notion, Office 365, Confluence, Apple iWork</dd></div>
             </dl>
@@ -163,7 +194,7 @@
         <section class="panel panel--b reveal" aria-labelledby="cert">
           <h2 id="cert" class="display-3">Certificates</h2>
           <ul class="facts-list" style="gap:12px">
-            <li><strong>Certified Product Designer</strong><span class="muted" style="font-size:14px">December 2026 · Digitale Leute School</span></li>
+            <li><strong>Certified Product Designer</strong><span class="muted" style="font-size:14px">December 2026 (expected) · Digitale Leute School</span></li>
             <li><strong>Clean Code Developer</strong><span class="muted" style="font-size:14px">January 2021 · DLR</span></li>
             <li><strong>Introduction to Project Management</strong><span class="muted" style="font-size:14px">August 2021 · Coursera</span></li>
           </ul>
@@ -174,7 +205,8 @@
           <ul class="list">
             <li>Automations that reduce manual work and errors</li>
             <li>Contracts and adoption listings</li>
-            <li>English translations for more international reach</li>
+            <li>English translations for more international reach and adoptions</li>
+            <li>Hands-on adoption experience as the basis for the Pfotenfinder case study</li>
           </ul>
         </section>
       </aside>
