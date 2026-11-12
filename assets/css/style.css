@@ -462,6 +462,17 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .gallery img { border-radius: 36px 24px 32px 20px; }
 .gallery__phone img { border-radius: 30px; width: min(260px, 100%); margin-inline: auto; }
 figcaption { padding: 14px 16px 6px; font-size: 15px; color: var(--muted); }
+/* Screen-Strecke: 5 Spalten auf Desktop, darunter horizontal scrollbar */
+.screens-title { margin: 72px 0 24px; }
+.screens { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.screens figure { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.screens img { width: 100%; height: auto; border-radius: 24px; box-shadow: 0 0 0 1px var(--hair), 0 24px 40px -28px rgba(29, 34, 48, 0.45); }
+.screens figcaption { padding: 0; font-size: 15px; line-height: 1.55; }
+.screens figcaption strong { display: block; margin-bottom: 4px; font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); }
+@media (max-width: 1080px) {
+  .screens { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(220px, 34%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; }
+  .screens li { scroll-snap-align: start; }
+}
 
 /* Lebenslauf */
 .cv-layout { display: flex; flex-wrap: wrap; gap: clamp(40px, 5vw, 72px); align-items: flex-start; }
