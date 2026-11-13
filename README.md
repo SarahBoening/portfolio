@@ -16,7 +16,7 @@ en/                           dieselben Seiten auf Englisch
 assets/css/style.css          alle Styles, Design-Tokens ganz oben
 assets/js/theme-init.js       setzt Hell/Dunkel vor dem ersten Zeichnen
 assets/js/main.js             Hell/Dunkel-Knopf, mobiles Menü, Einblenden beim Scrollen
-assets/fonts/                 Quicksand + Shantell Sans, selbst gehostet (SIL OFL, Lizenzen liegen bei)
+assets/fonts/                 Quicksand (Text), Fredoka (Überschriften), Kalam (nur Case Study Pfotenfinder), selbst gehostet (SIL OFL, Lizenzen liegen bei)
 assets/img/                   Bilder und Favicon
 ```
 

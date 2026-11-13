@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#1d2230" media="(prefers-color-scheme: dark)">
   <meta name="referrer" content="no-referrer">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/shantell-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/quicksand.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme-init.js"></script>
@@ -22,8 +22,8 @@
     <div class="header-island">
       <a class="brand" href="#top">Sarah Böning</a>
       <nav class="nav" aria-label="Hauptnavigation">
-          <a href="#weg">Werdegang</a>
           <a href="#projekte">Projekte</a>
+          <a href="#weg">Werdegang</a>
           <a href="#skills">Skills</a>
           <a href="#ueber">Über mich</a>
           <a href="lebenslauf.html">Lebenslauf</a>
@@ -44,8 +44,8 @@
     </div>
   </header>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Hauptnavigation">
-    <a href="#weg">Werdegang</a>
     <a href="#projekte">Projekte</a>
+    <a href="#weg">Werdegang</a>
     <a href="#skills">Skills</a>
     <a href="#ueber">Über mich</a>
     <a href="lebenslauf.html">Lebenslauf</a>
@@ -77,13 +77,46 @@
         <div class="shell portrait">
           <div class="core">
             <span class="portrait__blob" aria-hidden="true"></span>
-            <img class="portrait__img" src="assets/img/sarah_profilbild.png" width="398" height="398" alt="Illustration von Sarah Böning mit Brille und langen blonden Haaren" fetchpriority="high">
+            <img class="portrait__img" src="assets/img/sarah-pixel.svg" width="320" height="440" alt="Pixel-Art-Illustration von Sarah Böning mit Brille, langen blonden Haaren und blauem Shirt" fetchpriority="high">
           </div>
         </div>
         <span class="tag tag--research" aria-hidden="true">Forschung</span>
         <span class="tag tag--code" aria-hidden="true">Code &amp; Daten</span>
         <span class="tag tag--design" aria-hidden="true">Product Design</span>
       </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projekte" class="section container relative" aria-labelledby="projekte-title">
+      <div class="section-head section-head--split reveal">
+        <div class="stack">
+          <p class="eyebrow">Ausgewählte Projekte</p>
+          <h2 id="projekte-title" class="display-2">Case Studies</h2>
+        </div>
+        <p class="muted" style="max-width:24em">Mit dem Warum hinter jeder Entscheidung. Die Screens sind nur das Ende der Geschichte.</p>
+      </div>
+
+      <article class="project reveal">
+        <div class="project__inner">
+          <div class="project__text">
+            <ul class="chips" aria-label="Themen">
+              <li>UX Research</li><li>Konzept</li><li>Prototyping</li>
+            </ul>
+            <h3 class="display-2">Pfotenfinder</h3>
+            <p style="font-size:19px;font-weight:600">Passende Vermittlung von Tierschutztieren</p>
+            <p class="body-2">Viele Adoptionen scheitern nicht am guten Willen, sondern an der zu späten Passungsfrage. Pfotenfinder dreht die Suche um: erst klären, was zum eigenen Alltag passt, dann verlieben.</p>
+            <dl class="stats stats--insight">
+              <div><dt>Kern-Insight</dt><dd>Es fehlt ein Passungscheck, bevor man sich in ein Tier verliebt.</dd></div>
+            </dl>
+            <a class="btn btn--ink btn--icon" href="projekte/pfotenfinder.html">Case Study lesen <span class="btn__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <img class="shot-desktop" src="assets/img/pfotenfinder-desktop.webp" width="1600" height="1138" loading="lazy" alt="Pfotenfinder Desktop-Entwurf für das Tierheim Musterstadt: Titel „Zuhause gesucht, zueinander gefunden.“ über einem Foto, auf dem sich ein Tier an Füße in Wollsocken kuschelt, darunter „So funktioniert’s“ in drei Schritten und die Buttons Hund finden und Katze finden">
+            <img class="shot-mobile" src="assets/img/pfotenfinder-mobile.webp" width="402" height="874" loading="lazy" alt="Pfotenfinder Mobil-Entwurf der Startseite: Titel „Zuhause gesucht, zueinander gefunden.“, drei Schritte und die Buttons Hund finden, Katze finden sowie „Weiß ich noch nicht – hilf mir“">
+          </div>
+        </div>
+      </article>
+      <!-- TODO: Nächste Case Study als weiteren <article class="project"> hier einfügen -->
     </section>
 
     <!-- Werdegang -->
@@ -124,39 +157,6 @@
           </ol>
         </div>
       </div>
-    </section>
-
-    <!-- Projekte -->
-    <section id="projekte" class="section container relative" aria-labelledby="projekte-title">
-      <div class="section-head section-head--split reveal">
-        <div class="stack">
-          <p class="eyebrow">Ausgewählte Projekte</p>
-          <h2 id="projekte-title" class="display-2">Case Studies</h2>
-        </div>
-        <p class="muted" style="max-width:24em">Mit dem Warum hinter jeder Entscheidung. Die Screens sind nur das Ende der Geschichte.</p>
-      </div>
-
-      <article class="project reveal">
-        <div class="project__inner">
-          <div class="project__text">
-            <ul class="chips" aria-label="Themen">
-              <li>UX Research</li><li>Konzept</li><li>Prototyping</li>
-            </ul>
-            <h3 class="display-2">Pfotenfinder</h3>
-            <p style="font-size:19px;font-weight:600">Passende Vermittlung von Tierschutztieren</p>
-            <p class="body-2">Viele Adoptionen scheitern nicht am guten Willen, sondern an der zu späten Passungsfrage. Pfotenfinder dreht die Suche um: erst klären, was zum eigenen Alltag passt, dann verlieben.</p>
-            <dl class="stats stats--insight">
-              <div><dt>Kern-Insight</dt><dd>Es fehlt ein Passungscheck, bevor man sich in ein Tier verliebt.</dd></div>
-            </dl>
-            <a class="btn btn--ink btn--icon" href="projekte/pfotenfinder.html">Case Study lesen <span class="btn__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-          </div>
-          <div class="project__media">
-            <img class="shot-desktop" src="assets/img/pfotenfinder-desktop.webp" width="1600" height="1138" loading="lazy" alt="Pfotenfinder Desktop-Entwurf für das Tierheim Musterstadt: Titel „Zuhause gesucht, zueinander gefunden.“ über einem Foto, auf dem sich ein Tier an Füße in Wollsocken kuschelt, darunter „So funktioniert’s“ in drei Schritten und die Buttons Hund finden und Katze finden">
-            <img class="shot-mobile" src="assets/img/pfotenfinder-mobile.webp" width="402" height="874" loading="lazy" alt="Pfotenfinder Mobil-Entwurf der Startseite: Titel „Zuhause gesucht, zueinander gefunden.“, drei Schritte und die Buttons Hund finden, Katze finden sowie „Weiß ich noch nicht – hilf mir“">
-          </div>
-        </div>
-      </article>
-      <!-- TODO: Nächste Case Study als weiteren <article class="project"> hier einfügen -->
     </section>
 
     <!-- Skills -->

@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#1d2230" media="(prefers-color-scheme: dark)">
   <meta name="referrer" content="no-referrer">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="../assets/fonts/shantell-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/quicksand.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="../assets/js/theme-init.js"></script>
@@ -25,8 +25,8 @@
       <div class="header-island">
         <a class="brand" href="#top">Sarah Böning</a>
         <nav class="nav" aria-label="Main navigation">
-          <a href="#journey">Journey</a>
           <a href="#work">Work</a>
+          <a href="#journey">Journey</a>
           <a href="#skills">Skills</a>
           <a href="#about">About</a>
           <a href="../en/cv.html">CV</a>
@@ -55,8 +55,8 @@
       </div>
     </header>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Main navigation">
-      <a href="#journey">Journey</a>
       <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
       <a href="#skills">Skills</a>
       <a href="#about">About</a>
       <a href="../en/cv.html">CV</a>
@@ -97,59 +97,13 @@
           <div class="shell portrait">
             <div class="core">
               <span class="portrait__blob" aria-hidden="true"></span>
-              <img class="portrait__img" src="../assets/img/sarah_profilbild.png" width="398" height="398"
-                alt="Illustration of Sarah Böning with glasses and long blonde hair" fetchpriority="high">
+              <img class="portrait__img" src="../assets/img/sarah-pixel.svg" width="320" height="440"
+                alt="Pixel-art illustration of Sarah Böning with glasses, long blonde hair and a blue T-shirt" fetchpriority="high">
             </div>
           </div>
           <span class="tag tag--research" aria-hidden="true">Research</span>
           <span class="tag tag--code" aria-hidden="true">Code &amp; data</span>
           <span class="tag tag--design" aria-hidden="true">Product design</span>
-        </div>
-      </section>
-
-      <!-- Journey -->
-      <section id="journey" class="section section--tint relative" aria-labelledby="journey-title">
-        <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">My path</p>
-            <h2 id="journey-title" class="display-2">From research to code to design.</h2>
-            <p class="lead">Looks like a zigzag, but there's a common thread: I've always wanted to understand how
-              people work with computers and programs. Now I design this.</p>
-          </div>
-          <div class="journey">
-            <svg class="journey__thread" viewBox="0 0 1100 200" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M30 30C220 10 300 110 550 90S880 160 1070 140" />
-            </svg>
-            <ol>
-              <li class="shell reveal lift">
-                <div class="core">
-                  <span class="num" aria-hidden="true">01</span>
-                  <p class="meta">2018 to 2023 · Bauhaus-Universität Weimar &amp; German Aerospace Center e.V.</p>
-                  <h3 class="display-3">Research &amp; data</h3>
-                  <p class="body-2">Trained LLMs on source code, led a research project, conducted user research. This
-                    is where I learned to test assumptions instead of believing them.</p>
-                </div>
-              </li>
-              <li class="shell shell--b reveal lift">
-                <div class="core">
-                  <span class="num num--ink" aria-hidden="true">02</span>
-                  <p class="meta">2023 to 2026 · Enginsight GmbH, IT security</p>
-                  <h3 class="display-3">Software engineering</h3>
-                  <p class="body-2">Built, ran and documented backend services self-directed, worked closely with UX
-                    design and mentored junior colleagues. So I know what a ticket titled “quick fix” really costs.</p>
-                </div>
-              </li>
-              <li class="shell shell--c shell--accent reveal lift">
-                <div class="core">
-                  <span class="num num--accent" aria-hidden="true">03</span>
-                  <p class="meta">Since 2026 · Digitale Leute School</p>
-                  <h3 class="display-3">Product design</h3>
-                  <p class="body-2">UX research, lo-fi to hi-fi, accessibility and AI-assisted design. Everything I
-                    learned before, finally in one place, with users at the centre.</p>
-                </div>
-              </li>
-            </ol>
-          </div>
         </div>
       </section>
 
@@ -198,6 +152,52 @@
           </div>
         </article>
         <!-- TODO: add the next case study as another <article class="project"> here -->
+      </section>
+
+      <!-- Journey -->
+      <section id="journey" class="section section--tint relative" aria-labelledby="journey-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">My path</p>
+            <h2 id="journey-title" class="display-2">From research to code to design.</h2>
+            <p class="lead">Looks like a zigzag, but there's a common thread: I've always wanted to understand how
+              people work with computers and programs. Now I design this.</p>
+          </div>
+          <div class="journey">
+            <svg class="journey__thread" viewBox="0 0 1100 200" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M30 30C220 10 300 110 550 90S880 160 1070 140" />
+            </svg>
+            <ol>
+              <li class="shell reveal lift">
+                <div class="core">
+                  <span class="num" aria-hidden="true">01</span>
+                  <p class="meta">2018 to 2023 · Bauhaus-Universität Weimar &amp; German Aerospace Center e.V.</p>
+                  <h3 class="display-3">Research &amp; data</h3>
+                  <p class="body-2">Trained LLMs on source code, led a research project, conducted user research. This
+                    is where I learned to test assumptions instead of believing them.</p>
+                </div>
+              </li>
+              <li class="shell shell--b reveal lift">
+                <div class="core">
+                  <span class="num num--ink" aria-hidden="true">02</span>
+                  <p class="meta">2023 to 2026 · Enginsight GmbH, IT security</p>
+                  <h3 class="display-3">Software engineering</h3>
+                  <p class="body-2">Built, ran and documented backend services self-directed, worked closely with UX
+                    design and mentored junior colleagues. So I know what a ticket titled “quick fix” really costs.</p>
+                </div>
+              </li>
+              <li class="shell shell--c shell--accent reveal lift">
+                <div class="core">
+                  <span class="num num--accent" aria-hidden="true">03</span>
+                  <p class="meta">Since 2026 · Digitale Leute School</p>
+                  <h3 class="display-3">Product design</h3>
+                  <p class="body-2">UX research, lo-fi to hi-fi, accessibility and AI-assisted design. Everything I
+                    learned before, finally in one place, with users at the centre.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
       </section>
 
       <!-- Skills -->

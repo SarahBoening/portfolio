@@ -13,9 +13,24 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Shantell Sans";
-  src: url("../fonts/shantell-sans.woff2") format("woff2");
-  font-weight: 300 800;
+  font-family: "Fredoka";
+  src: url("../fonts/fredoka.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Kalam nur für die Pfotenfinder-Case-Study (wie in der App), Schnitte einzeln */
+@font-face {
+  font-family: "Kalam";
+  src: url("../fonts/kalam-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kalam";
+  src: url("../fonts/kalam-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -49,7 +64,8 @@
   --shadow-float: 0 40px 90px -40px rgba(29, 34, 48, 0.28);
   --inset: inset 0 1px 1px rgba(255, 255, 255, 0.9);
 
-  --font-display: "Shantell Sans", "Comic Neue", "Segoe Print", system-ui, sans-serif;
+  --font-site: "Fredoka", "Nunito", system-ui, sans-serif;
+  --font-display: var(--font-site);
   --font-body: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
 
   --ease: cubic-bezier(0.32, 0.72, 0, 1);
@@ -65,6 +81,9 @@
   --r-c-in: 28px 16px 32px 20px;
   --blob-shape: 58% 42% 46% 54% / 48% 56% 44% 52%;
 }
+
+/* Case-Study-Seiten (<body class="case">): Kalam wie in der Pfotenfinder-App */
+.case { --font-display: "Kalam", "Segoe Print", "Comic Neue", cursive; }
 
 /* Dunkel: folgt dem System, solange niemand selbst umschaltet */
 @media (prefers-color-scheme: dark) {
@@ -161,6 +180,7 @@ ul, ol { margin: 0; }
 .page { position: relative; overflow: clip; }
 .container { max-width: 1240px; margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--section); }
+.hero + .section { padding-top: 0; } /* Hero bringt unten schon Abstand mit */
 .section--tint { background: var(--surface-tint); border-radius: 72px 112px 0 0; }
 .stack { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
 .section-head { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; max-width: 760px; margin-bottom: 56px; }
@@ -290,7 +310,7 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
   background: var(--header-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 0 0 1px var(--hair), 0 20px 50px -20px rgba(29, 34, 48, 0.25);
 }
-.brand { font-family: var(--font-display); font-weight: 600; font-size: 20px; color: var(--text); text-decoration: none; white-space: nowrap; }
+.brand { font-family: var(--font-site); font-weight: 600; font-size: 20px; color: var(--text); text-decoration: none; white-space: nowrap; }
 .brand:hover { color: var(--accent); }
 .nav { display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 600; }
 .nav a { color: var(--text); text-decoration: none; transition: color 0.5s var(--ease); }
@@ -335,7 +355,7 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 }
 .mobile-nav.is-open { opacity: 1; visibility: visible; transition: opacity 0.6s var(--ease); }
 .mobile-nav a {
-  font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--text); text-decoration: none;
+  font-family: var(--font-site); font-size: 36px; font-weight: 600; color: var(--text); text-decoration: none;
   padding: 6px 0; opacity: 0; transform: translateY(32px);
   transition: transform 0.8s var(--ease), opacity 0.8s var(--ease);
 }
@@ -365,7 +385,7 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .hero__visual { flex: 1 1 380px; min-width: 0; position: relative; min-height: 560px; display: grid; place-items: center; }
 .portrait { width: min(420px, 92%); transform: rotate(-2deg); border-radius: 48px 40px 52px 36px; }
 .portrait .core { aspect-ratio: 1 / 1.1; border-radius: 40px 32px 44px 28px; place-items: center; justify-content: center; align-items: center; position: relative; overflow: hidden; }
-.portrait__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transform: scale(1.1); transform-origin: 50% 45%; }
+.portrait__img { position: absolute; inset: 6% 0 4%; width: 100%; height: 90%; object-fit: contain; }
 .portrait__blob { position: absolute; width: 70%; aspect-ratio: 1.1; background: var(--azure); border-radius: var(--blob-shape); }
 .tag {
   position: absolute; padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 15px; line-height: 1.2;

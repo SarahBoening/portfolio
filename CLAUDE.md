@@ -29,6 +29,9 @@ The 5 German pages at the root and in `projekte/` each have an English twin unde
 ## Styling and JS
 
 - All styles are in `assets/css/style.css`, which is organized into numbered sections (fonts, tokens, base, layout, components, page sections, motion, responsive) listed in the header comment.
+- Fonts: Quicksand for text, Fredoka for headings (`--font-display`). Pages with `<body class="case">` (the two Pfotenfinder case studies) switch `--font-display` to Kalam, matching the app. `.brand` and the mobile menu use `--font-site` so the header looks the same everywhere.
+- Homepage order is hero, case studies (`#projekte` / `#work`), Werdegang, skills, about, contact. In every header nav "Projekte"/"Work" comes first.
+- The hero avatar is a pixel-art SVG (`assets/img/sarah-pixel.svg`, 32×44 grid, `crispEdges`). `sarah_profilbild.png` is the old low-res avatar and no longer used.
 - Design tokens are CSS variables in `:root`. Dark mode overrides the same variables, so add new colors as tokens rather than hard-coded values.
 - Cards use a double border: `.shell` (outer) wraps `.core` (inner), with radius variants `.shell--b` and `.shell--c`.
 - Buttons are `.btn` plus a modifier (`--primary`, `--ink`, `--soft`, `--light`, `--outline-ink`). `.btn--icon` adds an icon island via `<span class="btn__icon">`.
