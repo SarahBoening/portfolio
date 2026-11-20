@@ -44,4 +44,4 @@ No cookies, tracking, or external requests: fonts are self-hosted, and no third-
 
 ## Open items
 
-The `TODO` markers in the HTML are the work list: the "Über mich" personal sentence, the next case study, usability-test results in the Pfotenfinder case study, and the STRATO details in the privacy pages.
+The `TODO` markers in the HTML are the work list: the "Über mich" personal sentence, the next case study, the Pfotenfinder case study's open items (results of the HiFi-v3 usability round, WCAG contrast values of the core colour pairs), and the STRATO details in the privacy pages.

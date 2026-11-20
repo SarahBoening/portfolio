@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Case Study Pfotenfinder · Sarah Böning</title>
-  <meta name="description" content="Pfotenfinder: Wie Menschen und Tierschutztiere besser zueinander finden. UX-Case-Study mit Interviews, Umfrage, Persona und Matching-Konzept.">
+  <meta name="description" content="Pfotenfinder: Wie Menschen und Tierschutztiere besser zueinander finden. UX-Case-Study von der Research über Persona und Matching-Konzept bis zu Usability-Test und HiFi-Prototypen.">
   <meta name="theme-color" content="#fffcfc" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1d2230" media="(prefers-color-scheme: dark)">
   <meta name="referrer" content="no-referrer">
@@ -63,10 +63,10 @@
         <h1 id="cs-title" class="display-1" style="font-size:clamp(56px,8vw,112px);line-height:.95">Pfotenfinder</h1>
         <p class="lead" style="font-size:clamp(20px,2vw,26px);max-width:26em">Wie Menschen und Tierschutztiere zueinander finden, bevor allein das Herz entscheidet.</p>
         <dl class="case-meta">
-          <div><dt class="kicker">Meine Rolle</dt><dd>Research, Konzept &amp; UI</dd></div>
-          <div><dt class="kicker">Zeitraum</dt><dd>August bis Dezember 2026</dd></div>
-          <div><dt class="kicker">Methoden</dt><dd>Interviews, Umfrage, Desk Research, Persona, HMW</dd></div>
-          <div><dt class="kicker">Status</dt><dd>In Arbeit: Usability-Test</dd></div>
+          <div><dt class="kicker">Meine Rolle</dt><dd>Solo: UX Research, Strategie, Interaction &amp; Visual Design</dd></div>
+          <div><dt class="kicker">Zeitraum</dt><dd>August bis November 2026</dd></div>
+          <div><dt class="kicker">Methoden</dt><dd>Interviews, Umfrage, Desk Research, Persona, Usability-Test</dd></div>
+          <div><dt class="kicker">Status</dt><dd>MidFi getestet, HiFi-Test vorbereitet</dd></div>
         </dl>
       </div>
     </section>
@@ -85,8 +85,8 @@
       <h2 id="tldr" class="kicker" style="font-family:var(--font-body);margin-bottom:28px">Kurz gesagt</h2>
       <div class="grid-auto">
         <div class="panel reveal"><h3 class="display-3">Problem</h3><p class="body-2">Menschen verlieben sich in ein Foto und prüfen erst danach, ob das Tier zu ihrem Alltag passt. Passt es nicht, wird es zum Rückläufer.</p></div>
-        <div class="panel panel--b reveal"><h3 class="display-3">Ansatz</h3><p class="body-2">Ein Matching direkt auf der Seite des Tierschutzvereins: erst Fragen zum eigenen Leben, dann passende Tiere mit Begründung.</p></div>
-        <div class="panel panel--c panel--ink reveal"><h3 class="display-3">Stand</h3><p class="body-2">Happy Path als klickbarer Mobil-Prototyp, Desktop in Arbeit. Als Nächstes: testen, ob Nutzer:innen der Vorauswahl vertrauen.</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">Ansatz</h3><p class="body-2">Ein Matching-Modul direkt auf der Website des Tierschutzvereins: erst Fragen zum eigenen Leben, dann passende Tiere mit Begründung. Umgesetzt auch als White-Label-Version mit dem echten Verein Ein Herz für Streuner e.V.</p></div>
+        <div class="panel panel--c panel--ink reveal"><h3 class="display-3">Stand</h3><p class="body-2">Zwei HiFi-Prototypen, mobil und Desktop. Der MidFi-Test mit 2 Personen ergab 23 Tickets, der HiFi-Test mit 5 Personen ist vorbereitet.</p></div>
       </div>
     </section>
 
@@ -96,8 +96,9 @@
         <div class="stack reveal">
           <p class="eyebrow">01 · Das Problem</p>
           <h2 id="s1" class="display-2">Guter Wille reicht nicht.</h2>
-          <p class="body-2" style="font-size:18px">Tierheime sind voll: Laut Deutschem Tierschutzbund haben nur 18 % noch Kapazitäten. Trotzdem kommen Tiere zurück, oft nach wenigen Tagen. Nicht, weil die Menschen es nicht ernst meinen, sondern weil Tier und Alltag nicht zusammenpassen.</p>
-          <p class="body-2" style="font-size:18px">Hilferufe wie dieser aus dem Umfeld von Ein Herz für Streuner e.V., wo ich mich ehrenamtlich engagiere, zeigen das deutlich. Genau dort setzt das Projekt an.</p>
+          <p class="body-2" style="font-size:18px"><strong>Die Nutzerseite.</strong> Suchende recherchieren gründlich, entscheiden aber nach Bauchgefühl. Tierprofile sind kurz, floskelhaft und oft mit veralteten Fotos, die eigene Eignung lässt sich daraus nicht ableiten. Wer Zweifel hat, merkt es meist erst nach dem Einzug.</p>
+          <p class="body-2" style="font-size:18px"><strong>Die Vereinsseite.</strong> Nur 18 % der Tierheime in Deutschland haben noch Aufnahmekapazität (Deutscher Tierschutzbund, 2024). Häufigste Abgabegründe sind Überforderung und fehlende Zeit. Vermittler:innen sieben ungeeignete Anfragen mit hohem Aufwand aus, per Telefon, Selbstauskunft und Vorkontrolle.</p>
+          <p class="body-2" style="font-size:18px"><strong>Die Spannung.</strong> Jede Fehlvermittlung kostet doppelt: Das Tier verliert erneut sein Zuhause, und der Platz fehlt für das nächste. Hilferufe wie dieser aus dem Umfeld von Ein Herz für Streuner e.V., wo ich mich ehrenamtlich engagiere, zeigen das deutlich.</p>
         </div>
         <figure class="shell reveal" style="margin:0;transform:rotate(2deg)">
           <div class="core" style="gap:20px;padding:40px">
@@ -114,18 +115,25 @@
       <div class="section-head reveal">
         <p class="eyebrow">02 · Research</p>
         <h2 id="s2" class="display-2">Drei Quellen, eine Frage.</h2>
-        <p class="lead">Ich habe drei Hypothesen aufgestellt und sie mit Interviews, einer Umfrage und Desk Research geprüft. Hypothesen sind für mich Werkzeuge, um Annahmen sichtbar und widerlegbar zu machen, keine Schlussfolgerungen.</p>
+        <p class="lead">Ich habe Hypothesen vorab formuliert und mit festen Schwellenwerten für Bestätigung und Widerlegung getestet. Hypothesen sind für mich Werkzeuge, um Annahmen sichtbar und widerlegbar zu machen, keine Schlussfolgerungen.</p>
       </div>
-      <div class="grid-auto">
-        <div class="shell reveal"><div class="core"><span class="big-number">4</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Interviews</h3><p class="body-2">Drei Adoptierende in der Entscheidungsphase und eine Vermittlerin als Expertin</p></div></div>
-        <div class="shell shell--b reveal"><div class="core"><span class="big-number">102</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Umfrage-Antworten</h3><p class="body-2">Davon 64 Personen, die sich online über Tiere informiert haben</p></div></div>
-        <div class="shell shell--c reveal"><div class="core"><span class="big-number">40</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Erkenntnisse</h3><p class="body-2">Aus Interviews, Umfrage und Studien (u. a. Tierschutzbund, Graf 2025, RSPCA Queensland) zusammengeführt und geclustert</p></div></div>
+      <div class="grid-auto" style="--min:240px">
+        <div class="shell reveal"><div class="core"><span class="big-number">4</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Interviews</h3><p class="body-2">Drei Adoptierende mit unterschiedlicher Tierart, Phase und Wohnsituation, dazu eine Vermittlerin als Expertin</p></div></div>
+        <div class="shell shell--b reveal"><div class="core"><span class="big-number">102</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Umfrage-Antworten</h3><p class="body-2">84 in relevanter Phase, davon 64 mit Online-Recherche als Basis der Detailfragen</p></div></div>
+        <div class="shell shell--c reveal"><div class="core"><span class="big-number">12</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Quellen im Desk Research</h3><p class="body-2">u. a. Powell et al. (2021), Graf (2025), Deutscher Tierschutzbund. Viele Studien stammen aus den USA, Annahmen für Deutschland habe ich markiert</p></div></div>
+        <div class="shell reveal"><div class="core"><span class="big-number">40</span><h3 style="font-family:var(--font-body);font-size:19px;font-weight:700">Erkenntnisse</h3><p class="body-2">Aus allen drei Quellen zusammengeführt und geclustert</p></div></div>
       </div>
       <ol class="hypo">
-        <li class="reveal"><p><strong>Hypothese 1:</strong> Die Wahl für ein Tier erfolgt primär emotional und optisch. Eignung wird erst nachträglich zur Rechtfertigung herangezogen.</p><span class="badge">bestätigt</span></li>
-        <li class="reveal"><p><strong>Hypothese 2:</strong> Menschen können ihre eigenen Rahmenbedingungen nur unzureichend in konkrete Anforderungen an ein Tier übersetzen.</p><span class="badge badge--partial">teilweise bestätigt</span></li>
-        <li class="reveal"><p><strong>Hypothese 3:</strong> Menschen mit Tierschutzbezug kontaktieren deutlich eher ein Tierheim als eine Zucht.</p><span class="badge">bestätigt</span></li>
+        <li class="reveal"><p><strong>H2:</strong> Die Auswahl erfolgt primär emotional und optisch.<small>87,5 % halten Fotos für relevant, nur 20,3 % die Rasse.</small></p><span class="badge">bestätigt</span></li>
+        <li class="reveal"><p><strong>H7:</strong> Menschen mit Tierschutzbezug kontaktieren deutlich eher ein Tierheim als eine Zucht.<small>NPS der Kontaktwahrscheinlichkeit: +43 für Tierheime, −68 für Züchter. Diese Hypothese kam nicht aus meinem ursprünglichen Set, sondern aus den Daten.</small></p><span class="badge">bestätigt</span></li>
+        <li class="reveal"><p><strong>H3:</strong> Menschen können ihre eigenen Rahmenbedingungen nur unzureichend in konkrete Anforderungen an ein Tier übersetzen.<small>Bedarf an Eignungs-Infos 79,7 %, berichtete Zweifel an der eigenen Eignung nur 18,75 %.</small></p><span class="badge badge--partial">teilweise bestätigt</span></li>
+        <li class="reveal"><p><strong>H4:</strong> Informationen über Tiere sind verstreut und unglaubwürdig.<small>93,75 % fanden ihre Quellen glaubwürdig.</small></p><span class="badge badge--refuted">widerlegt</span></li>
+        <li class="reveal"><p><strong>H1, H5, H6:</strong> Mit diesem Instrument nicht testbar.<small>Offen für Folgeforschung.</small></p><span class="badge badge--open">offen</span></li>
       </ol>
+      <div class="panel panel--azure reveal" style="margin-top:20px">
+        <h3 class="display-3">Die Widerlegung von H4 hat die Richtung verändert.</h3>
+        <p class="body-2">Ich hatte ein Plattformproblem vermutet: zu viele, zu schlechte Quellen. Tatsächlich ist die Landschaft vertrauenswürdig und konzentriert. Damit fiel die Idee eines weiteren Portals weg, und das Modul auf der Vereinswebsite rückte in den Fokus.</p>
+      </div>
     </section>
 
     <!-- 03 Erkenntnisse -->
@@ -136,9 +144,10 @@
           <p class="eyebrow">03 · Erkenntnisse</p>
           <h2 id="s3" class="display-2">Erst verlieben, dann nachdenken.</h2>
         </div>
-        <div class="grid-auto" style="--min:320px">
-          <div class="reveal"><div class="dark-card"><h3 class="display-3">Emotionale Auswahl</h3><p>Bilder entscheiden. Begründet wird später: „Sah so süß aus.“ „Ist ein Bauchgefühl.“ Das Verhalten im Tierschutz zählt mehr als Rasse oder Herkunft.</p></div></div>
-          <div class="reveal"><div class="dark-card"><h3 class="display-3">Unterschätzte Eignung</h3><p>79,7 % halten Infos zur nötigen Eignung für relevant, aber nur 18,75 % sehen die eigene Eignung als mögliches Hemmnis.</p><blockquote>„Ich mache wirklich ein Horrorszenario, wie es laufen kann, und die Leute sagen: Ja, ja, alles super. Kriegen wir hin.“</blockquote><p style="font-size:14px">Vermittlerin im Interview</p></div></div>
+        <div class="grid-auto" style="--min:420px">
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Emotionale Auswahl</h3><p>Bilder entscheiden. Begründet wird später: „Die war so süß, dass ich mich so direkt in sie verguckt habe.“ Das ist eine Designbedingung, kein Fehler, den man wegerziehen sollte.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Unterschätzte Eignung</h3><p>79,7 % halten Infos zur nötigen Eignung für relevant, aber nur 18,75 % sehen die eigene Eignung als mögliches Hemmnis. Die Lücke ist für Betroffene unsichtbar.</p><blockquote>„Ich mache wirklich ein Horrorszenario, wie es laufen kann, und die Leute sagen: Ja, ja, alles super. Kriegen wir hin.“</blockquote><p style="font-size:14px">Vermittlerin im Interview</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Vertrauen ist schon da</h3><p>68,3 % vertrauen der Website des Tierheims oder Vereins am meisten, und nicht die Menge an Info fehlt, sondern Info, die sich auf das eigene Leben übertragen lässt. Eine Lösung muss dorthin, nicht daneben.</p><blockquote>„Die Persönlichkeitsbeschreibungen sind immer recht kurz … Es wirkt sehr unpersönlich.“</blockquote><p style="font-size:14px">Adoptierende im Interview</p></div></div>
           <div class="reveal"><div class="dark-card"><h3 class="display-3">Klare Haltung zur Zucht</h3><p>Die Zielgruppe ist vom Tierschutz überzeugt und lehnt Züchter kategorisch ab. Ein Muster, das erst in den Daten auftauchte, und ein möglicher Bias, den ich offen mitführe.</p></div></div>
         </div>
         <div class="insight reveal">
@@ -153,12 +162,12 @@
       <div class="section-head reveal">
         <p class="eyebrow">04 · Segment &amp; Persona</p>
         <h2 id="s4" class="display-2">Für wen zuerst?</h2>
-        <p class="lead">Drei Segmente, eine bewusste Wahl. Die Systematisch Suchenden haben den am besten belegten Pain Point und sind über einen Kanal erreichbar, dem sie schon vertrauen.</p>
+        <p class="lead">Drei Segmente, eine bewusste Wahl. Die Systematisch Suchenden haben den am besten belegten Pain Point und sind über einen Kanal erreichbar, dem sie schon vertrauen: 92,2 % nutzen Vereinswebsites.</p>
       </div>
       <ul class="segments grid-auto" style="gap:16px;margin-bottom:56px">
         <li class="reveal"><strong>Die Vernetzten Überzeugten</strong><span>Größter Teil der Zielgruppe, gut belegt, aber kaum Hebel</span></li>
         <li class="reveal is-chosen"><strong>Die Systematisch Suchenden · gewählt</strong><span>Bestbelegter Pain Point und ein realistischer, vertrauter Interventionsort</span></li>
-        <li class="reveal"><strong>Die unentschlossenen Einsteiger:innen</strong><span>Großer Impact möglich, aber kaum Belege</span></li>
+        <li class="reveal"><strong>Die Unentschlossenen Einsteiger:innen</strong><span>Großer Impact möglich, aber kaum Belege</span></li>
       </ul>
       <div class="project reveal">
         <div class="project__inner" style="padding:clamp(28px,5vw,64px);gap:48px;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))">
@@ -166,6 +175,7 @@
             <span class="persona__avatar" aria-hidden="true">JS</span>
             <h3 class="display-2" style="font-size:36px">Jana-Sophie Meyer</h3>
             <p style="font-size:18px;font-weight:600;color:var(--accent)">etwa 28 · will einen Hund retten · sucht allein, ohne Netzwerk</p>
+            <p class="body-2">Streng aus den Quellen abgeleitet: Sie arbeitet neu remote, hält sich durchs Gassigehen mit Hunden von Verwandten für „einigermaßen erfahren“, recherchiert strukturiert und wartet trotzdem auf das Bauchgefühl „Der Hund ist es!“.</p>
             <p class="panel" style="font-size:17px;padding:24px">Jana-Sophie braucht verlässliche, individuelle Infos zu Wesen, Gesundheit und ihrer eigenen Eignung, weil Standard-Beschreibungen ihr weder zeigen, wie sich das Tier zuhause verhält, noch ob sie den Anforderungen gerecht wird.</p>
           </div>
           <div class="stack" style="gap:16px">
@@ -191,16 +201,21 @@
         <div class="blob" aria-hidden="true" style="bottom:-150px;left:-100px;width:380px;height:340px;background:var(--bg);opacity:.4"></div>
         <p class="eyebrow relative" style="color:var(--text);background:var(--soft)">05 · How might we</p>
         <h2 id="s5" class="display-2 relative" style="font-size:clamp(30px,3.8vw,52px);line-height:1.15">Wie können wir Jana-Sophie den Abgleich zwischen ihren Lebensumständen und den Bedürfnissen eines Tieres so früh wie möglich ermöglichen?</h2>
-        <p class="relative" style="font-size:18px">Die Frage dreht die gewohnte Reihenfolge um: erst Eignung, dann Fotos.</p>
+        <p class="relative" style="font-size:18px">Aus fünf HMW-Fragen die einzige, die den zeitlichen Kern des Problems trifft. Sie dreht die gewohnte Reihenfolge um: erst Eignung, dann Fotos.</p>
       </div>
     </section>
 
     <!-- 06 Konzept -->
     <section class="container" style="padding-bottom:var(--section)" aria-labelledby="s6">
-      <div class="section-head reveal" style="margin-bottom:0">
+      <div class="section-head reveal">
         <p class="eyebrow">06 · Konzept</p>
         <h2 id="s6" class="display-2">Kein weiteres Portal. Ein Matching, wo Vertrauen schon ist.</h2>
-        <p class="lead">Aus drei Ideen (Matching, Berater, Blind Date) habe ich das Matching weiterverfolgt. Es läuft direkt auf der Website des Tierschutzvereins, denn ohne die Vereine geht es nicht. Das System übersetzt Alltag und Erfahrung in passende Tiere.</p>
+        <p class="lead">Aus acht Ideen habe ich drei als Idea Napkins ausgearbeitet und nach Importance, Effort und Impact bewertet. Das Matching habe ich weiterverfolgt: Es läuft direkt auf der Website des Tierschutzvereins, denn ohne die Vereine geht es nicht.</p>
+      </div>
+      <div class="grid-auto" style="--min:320px">
+        <div class="shell reveal"><div class="core"><span class="badge">weiterverfolgt</span><h3 class="display-3">Matching</h3><p class="body-2">Fragen zu Alltag und Erfahrung, danach nur passende, verfügbare Tiere.</p><p class="body-2"><strong>Riskanteste Annahme:</strong> Nutzer:innen vertrauen der Vorauswahl.</p></div></div>
+        <div class="shell shell--b reveal"><div class="core"><span class="badge badge--open">verworfen</span><h3 class="display-3">Blind Date</h3><p class="body-2">Tiere zuerst ohne Fotos, nur über Wesen und Bedürfnisse. Die Idee packt das Problem an der Wurzel und landete in meiner Bewertung auf Platz 2.</p><p class="body-2"><strong>Warum nicht?</strong> 87,5 % stufen Fotos als relevant ein. Nimmt man sie weg, öffnen Menschen trotzdem alle Profile und sortieren nach Optik, oder gehen woanders hin. Das Vertrauen, das die Research als größtes Asset gezeigt hat, wäre verspielt.</p></div></div>
+        <div class="shell shell--c reveal"><div class="core"><span class="badge badge--open">verworfen</span><h3 class="display-3">Berater</h3><p class="body-2">Ein Chatbot, der Lebensumstände abfragt und Einschätzungen gibt.</p><p class="body-2"><strong>Warum nicht?</strong> Vertrauen in einen Chatbot bei einer so folgenreichen Entscheidung war die am wenigsten belegte Annahme der drei. Die Research zeigte Vertrauen in Vereine, nicht in Technik.</p></div></div>
       </div>
       <ol class="flow" aria-label="Ablauf des MVP">
         <li class="reveal"><small>Schritt 1</small><strong>Bedarf entsteht</strong><span>Matching öffnen</span></li>
@@ -209,10 +224,19 @@
         <li class="reveal"><small>Schritt 4</small><strong>Auswahl treffen</strong><span>Profile ansehen, Tier auswählen</span></li>
         <li class="reveal"><small>Schritt 5</small><strong>Anfrage stellen</strong><span>Anfrage an den Verein senden</span></li>
       </ol>
+      <div class="panel reveal" style="margin-bottom:20px">
+        <h3 class="kicker" style="font-family:var(--font-body)">Vier Entscheidungen im Flow</h3>
+        <ul class="dots">
+          <li><span><strong>Weniger Auswahl, bessere Entscheidung.</strong> Statt einer Liste aller Tiere zeigt Pfotenfinder nur passende. Das senkt Choice Overload (Hick’s Law). Eine freie Suche als Umweg habe ich im MVP bewusst weggelassen, damit niemand den Fragebogen überspringt.</span></li>
+          <li><span><strong>Moment of Value: die Ergebnisliste.</strong> Jedes Tier ist begründet ausgewählt, ein Verlieben in ein unpassendes Tier wird unwahrscheinlicher.</span></li>
+          <li><span><strong>Critical Moment: die Anfrage.</strong> Ein Tier kann schon reserviert sein, Angaben können geschönt sein, Technik kann ausfallen. Deshalb gehen Anfragen direkt ans Tierheim, wo erfahrene Vermittler:innen sie prüfen.</span></li>
+          <li><span><strong>Kein Konto, keine Hürde.</strong> Angaben bleiben lokal auf dem Gerät. Wer wiederkommt, muss nicht neu anfangen, und niemand muss sich registrieren, bevor er ein Tier gesehen hat.</span></li>
+        </ul>
+      </div>
       <div class="grid-auto" style="--min:320px">
-        <div class="shell reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Riskanteste Annahme</h3><p style="font-family:var(--font-display);font-size:24px;font-weight:600;line-height:1.3">Nutzer:innen vertrauen der Vorauswahl und sind damit zufrieden.</p></div></div>
-        <div class="shell shell--b reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Erfolg messen</h3><ul class="list"><li>Anteil der Anfragen, die über das Matching kommen</li><li>Anteil positiver Google-Bewertungen seit Einführung</li></ul></div></div>
-        <div class="shell shell--c shell--accent reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body);color:var(--accent)">Responsible Design</h3><ul class="list"><li>Aussagekräftige Alt-Texte für alle Tierbilder</li><li>Sprache ohne emotionalen Druck, Fachbegriffe einfach erklärt</li></ul></div></div>
+        <div class="shell reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Modul statt Portal</h3><p class="body-2">Die Chance liegt nicht in einer weiteren Vermittlungsplattform, die Vereinen zusätzliche Pflege abverlangt und Suchende mit Werbung stört. Pfotenfinder kommt zu den Vereinen, dorthin, wo das Vertrauen liegt. Im Business Model Canvas habe ich das als günstiges Abo angelegt: Vereine sind spendenfinanziert, das Modell bleibt bewusst schlank. Ein vergleichbares Angebot für den deutschen Markt habe ich nicht gefunden.</p></div></div>
+        <div class="shell shell--b reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Ethik als Designkriterium</h3><p class="body-2">Bestehende Matching-Tools setzen mit Sprache unter Druck: „dein neuer bester Freund“ neben Zahlen zu getöteten Tieren. Findet man dann kein Match, fühlt man sich schuldig. Meine Leitplanken: sachliche Fakten, keine suggestiven Versprechen, und ein Ergebnis ohne Treffer ist kein Scheitern der Person.</p></div></div>
+        <div class="shell shell--c shell--accent reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body);color:var(--accent)">Responsible Design</h3><ul class="list"><li>Alt-Texte, die das Tier beschreiben</li><li>Matching ohne Swipe-Zwang, auch per Tastatur bedienbar</li><li>Einfache Sprache für Fachbegriffe wie Schutzgebühr, Vorkontrolle oder Giardien</li></ul></div></div>
       </div>
     </section>
 
@@ -220,10 +244,21 @@
     <section class="section section--tint" aria-labelledby="s7">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">07 · Design</p>
+          <p class="eyebrow">07 · Wireframing &amp; Design</p>
           <h2 id="s7" class="display-2">Warm, vertraulich, persönlich. Und anpassbar.</h2>
-          <p class="lead">Pfotenfinder lebt auf den Seiten verschiedener Vereine, also muss die Gestaltung deren Farben aufnehmen können. Das Logo zeigt eine Pfote als Aussparung in einem Standort-Pin: ein Fundpunkt.</p>
+          <p class="lead">Leitsatz: das Tierheim um die Ecke, nicht die Kampagne. Die Gestaltung soll Vertrauen stützen, nicht Mitleid erzeugen. Und weil Pfotenfinder auf den Seiten verschiedener Vereine lebt, muss sie deren Farben aufnehmen können.</p>
         </div>
+        <h3 class="kicker case-sub" style="margin-top:0">Wireframing: drei Stufen, jede mit einer Frage</h3>
+        <ol class="flow" style="grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));margin-top:0" aria-label="Wireframing-Stufen">
+          <li class="reveal"><small>LoFi</small><strong>Trägt der Happy Path?</strong><span>Fragebogen vor den Tieren, dann Ergebnisliste, Detailseite und Anfrage, ohne Umweg über eine freie Suche</span></li>
+          <li class="reveal"><small>MidFi v1/v2</small><strong>Welche Bausteine wiederholen sich?</strong><span>Wiederverwendbare Komponenten für Fragen, Match-Karten, Detail-Accordions und Formulare</span></li>
+          <li class="reveal"><small>MidFi v3</small><strong>Wirkt es verlässlich?</strong><span>Systematisches Audit und Veredelung, siehe Iteration</span></li>
+        </ol>
+        <div class="grid-auto" style="--min:320px;margin-bottom:72px">
+          <div class="panel reveal"><h3 class="display-3">MVP-Schnitt über die Story Map</h3><p class="body-2">Fünf Aktivitäten trugen den Scope. Ins MVP kamen nur die Tasks, mit denen sich die riskanteste Annahme testen lässt: Akzeptieren Nutzer:innen eine eingeschränkte Auswahl und finden darin ein passendes Tier? Ergebnisse vergleichen habe ich bewusst zurückgestellt.</p></div>
+          <div class="panel panel--b reveal"><h3 class="display-3">Progressive Disclosure</h3><p class="body-2">Gesundheit, Verträglichkeit und Erfahrungsbedarf liegen auf der Detailseite in Accordions. Das hält die Seite mobil scannbar. Das Foto bleibt oben: Die emotionale Verbindung soll entstehen, nur eben erst bei passenden Tieren.</p></div>
+        </div>
+        <h3 class="kicker case-sub" style="margin-top:0">Visual Design</h3>
         <div class="gallery">
           <figure class="shell gallery__wide reveal">
             <img src="../assets/img/pfotenfinder-moodboard.webp" width="1600" height="901" loading="lazy" alt="Moodboard Pfotenfinder: warme Creme- und Brauntöne, handschriftliche Überschriften, Fotos von Hunden und Katzen, frühe UI-Skizzen">
@@ -231,45 +266,267 @@
           </figure>
           <figure class="gallery__phone reveal">
             <img src="../assets/img/pfotenfinder-mobile.webp" width="402" height="874" loading="lazy" alt="Pfotenfinder Mobil-Entwurf der Startseite: Titel „Zuhause gesucht, zueinander gefunden.“, drei Schritte und die Buttons Hund finden, Katze finden sowie „Weiß ich noch nicht – hilf mir“">
-            <figcaption style="text-align:center">Happy Path, mobil</figcaption>
+            <figcaption style="text-align:center">Startseite, mobil</figcaption>
           </figure>
         </div>
-        <h3 class="kicker screens-title" style="font-family:var(--font-body)">Der Happy Path in fünf Screens</h3>
-        <ol class="screens reveal" tabindex="0" aria-label="Screens des Happy Path, horizontal scrollbar">
-          <li><figure>
-            <img src="../assets/img/pfotenfinder-screen-alltag.webp" width="402" height="874" loading="lazy" alt="Fragebogen Schritt 1 von 3, „Erzähl uns von deinem Alltag“: Auswahlfelder zu Wohnsituation, Alter und Abwesenheit an Werktagen, Checkboxen dazu, wer noch im Haushalt lebt, Buttons Abbrechen und Weiter">
-            <figcaption><strong>Alltag zuerst</strong>Drei kurze Schritte mit sichtbarem Fortschritt. Die Angaben bleiben auf dem Gerät, bis eine Anfrage rausgeht.</figcaption>
-          </figure></li>
-          <li><figure>
-            <img src="../assets/img/pfotenfinder-screen-erfahrung.webp" width="402" height="874" loading="lazy" alt="Fragebogen Schritt 2 von 3, „Deine Erfahrung“: Fragen nach bisherigem Hund und Tierschutztier, Mehrfachauswahl zu Erfahrungen wie Angsthund oder Herdenschutzhund mit kurzer Erklärung der Begriffe, Frage zur Hundeschule">
-            <figcaption><strong>Fachbegriffe erklärt</strong>Was ein Angsthund oder Herdenschutzhund ist, steht direkt an der Frage. So schätzt sich niemand aus Unwissen falsch ein.</figcaption>
-          </figure></li>
-          <li><figure>
-            <img src="../assets/img/pfotenfinder-screen-ergebnis.webp" width="402" height="874" loading="lazy" alt="Ergebnisliste „4 Tiere passen zu dir“, sortiert nach Match: Bello passt zu 92 %, Fiffi zu 88 %, Struppi zu 81 %, Idefix zu 74 %, jeweils mit einem Grund dafür und einem Hinweis, der dagegen sprechen könnte">
-            <figcaption><strong>Gründe statt Fotos</strong>Jedes Match zeigt, was passt und worauf man achten sollte. Die Eignung steht vor dem Verlieben.</figcaption>
-          </figure></li>
-          <li><figure>
-            <img src="../assets/img/pfotenfinder-screen-detail.webp" width="402" height="874" loading="lazy" alt="Detailseite von Bello: Fotogalerie, „passt zu 92 % zu dir“ mit Hinweis, dass der Wert aus den eigenen Angaben berechnet wird, Eckdaten, Herkunft und Quelle der Angaben, Abschnitt „Das passt“ und Button „Bello anfragen“">
-            <figcaption><strong>Nachvollziehbares Match</strong>Woraus der Wert berechnet ist und von wem die Angaben stammen, steht direkt dabei. Das zahlt auf die riskanteste Annahme ein: Vertrauen in die Vorauswahl.</figcaption>
-          </figure></li>
-          <li><figure>
-            <img src="../assets/img/pfotenfinder-screen-anfrage.webp" width="402" height="874" loading="lazy" alt="Bestätigung „Danke – deine Anfrage für Bello ist angekommen“: Hinweis, dass sich das Tierheim innerhalb von etwa 5 Tagen meldet, drei nächste Schritte und Button „Weitere Matches ansehen“">
-            <figcaption><strong>Keine Funkstille</strong>Nach der Anfrage ist klar, wann sich das Tierheim meldet und was als Nächstes passiert.</figcaption>
-          </figure></li>
-        </ol>
+        <div class="grid-auto" style="--min:320px;margin-top:56px">
+          <div class="shell reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Marke</h3><p class="body-2">Der Claim „Zuhause gesucht, zueinander gefunden.“ trägt beide Seiten der Vermittlung. Das Logo mit einer Pfote als Aussparung in einem Standort-Pin habe ich wieder verworfen, weil es dem Logo von Tractive zu nahe kam. Gewählt habe ich ein Haus aus zwei ineinandergreifenden Hälften mit Pfote und Herz: Mensch und Tier, die zusammenpassen.</p></div></div>
+          <div class="shell shell--b reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Typografie mit Rollen</h3><p class="body-2">Kalam bleibt Display-Schrift für Headlines, die Handschrift ist die Markenstimme. Für die UI habe ich drei parallele Familien auf Figtree vereinheitlicht. Zeilenhöhe und Laufweite sind nach Rolle gesetzt.</p></div></div>
+          <div class="shell shell--c reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Farbe als System</h3><p class="body-2">13 semantische Tokens steuern 481 Füllungen und 155 Konturen. Statt drei Schwarztönen nutze ich ein warmes Fast-Schwarz (#2A211B), Amber und Grün sind entsättigt, damit sie ruhig wirken. Grün steht für Passung, Amber für Handlung.</p></div></div>
+          <div class="shell reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Form und Tiefe</h3><p class="body-2">Eine Radius-Skala 6/8/12/16/20 plus Pill ersetzt zwölf zufällige Werte. Match-Karten tragen Hierarchie über zwei braun getönte Schatten statt über Rahmen.</p></div></div>
+          <div class="shell shell--b reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body)">Skalierbar als White Label</h3><p class="body-2">Die Token-Struktur ist die Grundlage dafür, das Modul im Branding eines Vereins auszuspielen. Für Ein Herz für Streuner habe ich den HiFi-Prototyp auf Vereinsfarben und echte Tiere des Vereins umgestellt.</p></div></div>
+          <div class="shell shell--c shell--accent reveal"><div class="core"><h3 class="kicker" style="font-family:var(--font-body);color:var(--accent)">Accessibility</h3><p class="body-2">Sichtbare Labels über allen Formularfeldern statt reiner Placeholder. Der Fortschritt ist segmentiert, sodass der Schritt auch ohne Lesen erkennbar ist.</p><!-- TODO: Kontrastwerte der Kern-Paarungen nach WCAG 2.2 AA ergänzen, z. B. text/primary auf surface/cream --></div></div>
+        </div>
       </div>
     </section>
 
-    <!-- 08 Fazit -->
+    <!-- 08 Test -->
     <section class="section container" aria-labelledby="s8">
       <div class="section-head reveal">
-        <p class="eyebrow">08 · Fazit &amp; nächste Schritte</p>
-        <h2 id="s8" class="display-2">Was ich mitnehme.</h2>
+        <p class="eyebrow">08 · Prototyping &amp; Testing</p>
+        <h2 id="s8" class="display-2">Akzeptiert, aber nur, wenn der Score nachvollziehbar ist.</h2>
+        <p class="lead">Der Test sollte eine Frage beantworten: Akzeptieren Menschen eine Vorauswahl, wenn sie ein Tier suchen, in das sie sich verlieben wollen? Das war die riskanteste Annahme hinter dem Matching. Beide Testpersonen haben den Flow ohne Abbruch abgeschlossen und das Matching aktiv genutzt. Wie der Score zustande kommt, blieb jedoch unklar.</p>
+      </div>
+      <div class="panel reveal">
+        <h3 class="kicker" style="font-family:var(--font-body)">Setup</h3>
+        <p class="body-2">Moderierter Usability-Test des MidFi-Prototyps (v4) auf dem iPhone, mit Thinking Aloud, drei Aufgaben und Abschlussinterview. Das Szenario versetzte die Teilnehmenden in die Lage der Persona Jana-Sophie. Zwei Sessions im Oktober 2026, 21 und 16 Minuten. Vorab habe ich vier Test-Hypothesen formuliert.</p>
+      </div>
+      <ol class="hypo" style="margin-top:20px">
+        <li class="reveal"><p>Die Selbstauskunft im Fragebogen wird als passend empfunden.<small>Beide füllen selbstständig aus, Angemessenheit 4 von 4. Fachbegriffe und die Altersauswahl verunsichern.</small></p><span class="badge">bestätigt, mit Vorbehalt</span></li>
+        <li class="reveal"><p>Infos und Score wirken glaubwürdig, nicht werblich.<small>Nichts wirkt werblich. Unerklärte Abzüge, fehlende Quellen und vage Angaben senken die Glaubwürdigkeit.</small></p><span class="badge badge--partial">teilweise</span></li>
+        <li class="reveal"><p>Die Anfrage wird selbstständig abgeschlossen.<small>Beide senden die Anfrage in unter einer Minute ab.</small></p><span class="badge">bestätigt</span></li>
+        <li class="reveal"><p>Die Passung wird verstanden und genutzt.<small>Beide sortieren Hunde über die Match-Hinweise aus. Eine Person versteht den Score nur als Rangfolge.</small></p><span class="badge badge--partial">teilweise</span></li>
+      </ol>
+      <h3 class="kicker case-sub">Top-Befunde</h3>
+      <div class="grid-auto" style="--min:320px">
+        <div class="panel reveal"><h3 class="display-3">Die fehlenden 8 %</h3><p class="body-2">Beide fragen unabhängig voneinander, warum Bello nicht 100 % hat, obwohl alle Punkte grün sind. Das stärkste Muster im Test.</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">Matching als Ausschluss-Hilfe</h3><p class="body-2">Physiotherapie, Jagdtrieb und nötige Erfahrung führen direkt zum Aussortieren. Die Hinweise sind mindestens so wertvoll wie die Prozentzahl.</p></div>
+        <div class="panel panel--c reveal"><h3 class="display-3">Projektvokabular statt Nutzersprache</h3><p class="body-2">„Passung ist ein dummes Wort.“ Der Begriff war beiden fremd.</p></div>
+        <div class="panel reveal"><h3 class="display-3">Herz statt Karte</h3><p class="body-2">Eine Person tippt auf das Merken-Herz statt auf die Karte und kommt ohne Hinweis nicht zur Detailseite. Die einzige Stelle, an der ich eingreifen musste.</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">Unsicherheit rund ums Absenden</h3><p class="body-2">Davor: „Es fühlt sich zu einfach an.“ Danach: „Startseite. Und jetzt?“</p></div>
+        <div class="panel panel--c reveal"><h3 class="display-3">Kontraste</h3><p class="body-2">Von beiden bemängelt, bei einer Person durchgängig.</p></div>
+      </div>
+      <div class="panel panel--azure reveal" style="margin-top:20px">
+        <h3 class="display-3">Ehrlich zur Aussagekraft</h3>
+        <p class="body-2">Zwei Personen liefern erste Hinweise, keine statistische Bestätigung. Eine Testperson hatte Hundeerfahrung und fiel mehrfach aus der Persona-Rolle, bei ihr lief zudem eine falsche Prototyp-Version. Daraus habe ich vier Methodik-Tickets abgeleitet, statt die Befunde zu glätten. Wenn zwei Personen unabhängig an derselben Stelle stolpern, werte ich das trotzdem als klares Muster.</p>
+      </div>
+
+      <h3 class="kicker case-sub">Vom Befund zum Backlog</h3>
+      <ul class="facts reveal" aria-label="Tickets aus den Test-Sessions">
+        <li><strong>23</strong><span>Tickets insgesamt</span></li>
+        <li><strong>6</strong><span>kritisch: blockieren den Flow oder untergraben das Vertrauen</span></li>
+        <li><strong>11</strong><span>wichtig: Reibung, die Antworten oder Verständnis verschlechtert</span></li>
+        <li><strong>6</strong><span>Nice-to-have</span></li>
+      </ul>
+      <p class="body-2" style="margin-top:20px;max-width:46em">Priorisiert habe ich nach der Wirkung auf das Vertrauen ins Matching. Die kritischen und wichtigen Design-Tickets flossen in die überarbeitete HiFi v3.</p>
+
+      <h3 class="kicker case-sub">Zweite Testrunde: HiFi v3</h3>
+      <div class="grid-auto" style="--min:420px">
+        <div class="panel reveal"><h3 class="display-3">Vorbereitet</h3><p class="body-2">Fünf Personen aus dem Fokussegment, ohne eigene Hundeerfahrung und ohne Teilnahme am ersten Test. Die Runde prüft gezielt die 20 Tickets, die ich zur Überprüfung markiert habe. Ein Ticket gilt als gelöst, wenn mindestens 4 von 5 Personen das Kriterium ohne Hilfe erfüllen. Dazu erfasse ich die Single Ease Question pro Aufgabe und den Vertrauenswert in die Tierinfos (Ziel ≥ 4 von 5, MidFi: 3).</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">Warum kein A/B-Test?</h3><p class="body-2">Für die wichtigste Änderung, den getrennten Match-Kasten, habe ich eine eigene Test Card angelegt. Ein A/B-Test wäre unrealistisch: Anfragen sind selten. Bei angenommenen 5 % Anfragequote bräuchte man für 20 % Effekt rund 8.000 Personen pro Variante, und Saison und Tierbestand würden das Ergebnis verzerren. Stattdessen prüft ein moderierter Verständnistest mit 5 Personen beide Versionen in wechselnder Reihenfolge: „Erklär mir, warum Bello nicht 100 % erreicht.“</p></div>
+      </div>
+      <!-- TODO: Ergebnisse der HiFi-v3-Runde ergänzen, sobald sie gelaufen ist: vor allem Vertrauenswert, Einstieg in die Detailseite ohne Hilfe und die Reaktion nach dem Absenden im Vergleich zu MidFi -->
+    </section>
+
+    <!-- 09 Iteration -->
+    <section class="section section--tint" aria-labelledby="s9">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">09 · Iteration</p>
+          <h2 id="s9" class="display-2">Ein unerklärter Abzug wiegt schwerer als ein niedriger Wert.</h2>
+          <p class="lead">Die wichtigste Iteration entstand aus der Frage, die zwei Testpersonen unabhängig stellten: Warum hat Bello nur 92 %? Daraus wurde ein Matching, das seine Vorbehalte offen zeigt. Den Boden dafür hatte ein ehrliches Audit meiner eigenen MidFi v2 bereitet: Sie sah fertig aus, hatte aber kein System darunter.</p>
+        </div>
+
+        <h3 class="kicker case-sub" style="margin-top:0">Vom Testbefund zur Änderung</h3>
+        <ul class="compare">
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Fehlende 8 % unerklärt; „Warum X passt“ enthielt auch nicht passende Punkte, „etwas irritierend“</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Abzüge konkret benennen. Match-Kasten getrennt in „Das passt“ und „Das solltest du wissen“; jede Ergebniskarte zeigt eine Stärke und einen Vorbehalt</p></div>
+            <div><span class="kicker">Trade-off</span><p>Bei schwer vermittelbaren Tieren kann „Das solltest du wissen“ abschrecken. Ich nehme das bewusst in Kauf: Weniger, aber passendere Anfragen sind für den Tierschutz ein Erfolg</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Score nur als Rangfolge verstanden; „Passung“ fremd</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>„passt zu 92 %“ plus Erklärsatz: berechnet aus deinen Angaben zu Alltag, Wohnung und Erfahrung</p></div>
+            <div><span class="kicker">Trade-off</span><p>Das präzisere Fachwort fällt weg, die Sprache der Zielgruppe gewinnt</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Tippen auf das Herz statt auf die Karte</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Karte klar klickbar mit Pfeil; Merken nur noch auf der Detailseite, mit Label; Merkliste mit Zähler im Header statt im Menü</p></div>
+            <div><span class="kicker">Trade-off</span><p>Merken direkt aus der Liste entfällt, ein Schritt mehr für einen eindeutigen Einstieg. Der Impuls für die sichtbare Merkliste kam aus dem Präsentations-Feedback</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Vertrauen in die Tierinfos nur 3 von 5: keine Quelle, „gesund“ nichtssagend, „mittelgroß“ ungenau</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Quelle und Stand der Angaben, Größe in cm und Gewicht in kg, konkrete Gesundheit, Ganzkörperfotos mit Großansicht, Abschnitt zur Vorgeschichte</p></div>
+            <div><span class="kicker">Trade-off</span><p>Mehr Daten, die ein Verein aktuell halten muss</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>„Darf ich auf Anfrage senden drücken?“ und danach „Startseite. Und jetzt?“</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Hinweis über dem Button: „Unverbindlich, aber ernst gemeint“; Bestätigung mit 5-Tage-Zusage und „Weitere Matches ansehen“</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Fachbegriffe wie „positiv arbeitende Hundeschule“ unklar; Altersauswahl versehentlich abgewählt</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Hilfetexte, konkrete Fellpflege-Optionen, feinere Altersklassen, „Mehrere Antworten möglich“</p></div>
+            <div><span class="kicker">Trade-off</span><p>Etwas mehr Text im Fragebogen</p></div>
+          </li>
+          <li class="reveal">
+            <div><span class="kicker">Was nicht funktionierte</span><p>Grauer Text und Auswahlfelder zu kontrastarm</p></div>
+            <div><span class="kicker">Geändert in HiFi v3</span><p>Alle Kontraste auf WCAG AA: 4,5:1 für Text, 3:1 für UI-Elemente; ausgewählte Werte dunkel und fett</p></div>
+            <div><span class="kicker">Trade-off</span><p>Die zurückhaltend warme Palette wird etwas kräftiger</p></div>
+          </li>
+        </ul>
+
+        <h3 class="kicker case-sub">MidFi v2 → v3: Audit statt Bauchgefühl</h3>
+        <ul class="compare">
+          <li class="reveal"><div><span class="kicker">Schrift</span><p>Drei Familien parallel, eine davon in Figma gar nicht vorhanden</p></div><div><span class="kicker">Nachher</span><p>Figtree für UI, Kalam für Display, Skala nach Rolle</p></div></li>
+          <li class="reveal"><div><span class="kicker">Farbe</span><p>Reines Schwarz 74×, warme und kühle Grautöne gemischt, Akzente bis 100 % Sättigung</p></div><div><span class="kicker">Nachher</span><p>Ein warmes Fast-Schwarz, eine Grau-Familie, entsättigte Akzente</p></div></li>
+          <li class="reveal"><div><span class="kicker">Tokens</span><p>Keine Variablen, keine Styles</p></div><div><span class="kicker">Nachher</span><p>13 semantische Tokens, 636 Bindungen</p></div></li>
+          <li class="reveal"><div><span class="kicker">Radien und Abstände</span><p>12 Radien, Gaps ohne Basis-Skala</p></div><div><span class="kicker">Nachher</span><p>Radius-Skala 6 bis 20 plus Pill</p></div></li>
+          <li class="reveal"><div><span class="kicker">Hierarchie</span><p>Karten über Rahmen, ein einziger Schatten</p></div><div><span class="kicker">Nachher</span><p>Getönte Elevation-Stufen für Karten, Header, Sticky-CTA, Dialog</p></div></li>
+          <li class="reveal"><div><span class="kicker">„Kein Treffer“</span><p>Drei gleich aussehende Buttons</p></div><div><span class="kicker">Nachher</span><p>Primär, Sekundär, Textlink: klare Rangfolge</p></div></li>
+          <li class="reveal"><div><span class="kicker">Formulare</span><p>Nur Placeholder als Label</p></div><div><span class="kicker">Nachher</span><p>Sichtbare Labels, realistische Beispielwerte</p></div></li>
+          <li class="reveal"><div><span class="kicker">Microcopy</span><p>„Danke! …“, „Finde deine Pfote!“</p></div><div><span class="kicker">Nachher</span><p>„Danke – deine Anfrage für Bello ist angekommen.“</p></div></li>
+        </ul>
+        <div class="panel reveal" style="margin-top:20px">
+          <h3 class="display-3">Bewusst nicht gemacht</h3>
+          <p class="body-2">Die Accordions auf der Detailseite sind geblieben, obwohl sie Inhalte verbergen: mobil ist progressive Disclosure hier richtig. Hover- und Pressed-States habe ich für den statischen Prototyp nicht angelegt. Einen Vorschlag aus Figma Make, den Match-Score direkt aufs Tierfoto zu legen, habe ich verworfen: Er verdeckt genau das, worum es geht, das Tier.</p>
+        </div>
+
+        <h3 class="kicker case-sub">HiFi: Entscheidungen unter echten Constraints</h3>
+        <div class="grid-auto" style="--min:420px">
+          <div class="panel reveal"><h3 class="display-3">Datenspeicherung</h3><p class="body-2">Ohne Speicherung müssten Nutzer:innen den Fragebogen bei jedem Besuch neu ausfüllen. Mit Konto und Server wäre die Hürde für Vereine und Datenschutz zu hoch. Ich habe mich für lokale Speicherung auf dem Gerät entschieden: kein Konto, kein Server, Anfragen gehen direkt ans Tierheim. Ich gewinne Komfort und Vertrauen und verzichte auf geräteübergreifende Nutzung.</p></div>
+          <div class="panel panel--b reveal"><h3 class="display-3">Echter Partner, echte Grenzen</h3><p class="body-2">Bei Ein Herz für Streuner hat der Verein die Spielregeln gesetzt:</p>
+            <ul class="list body-2">
+              <li>Die Selbstauskunft läuft über PetOffice, ohne Schnittstelle zum Vorausfüllen. Statt eine Integration vorzutäuschen, habe ich die Anfrage zur Übergabe umgebaut.</li>
+              <li>Tiermerkmale pflegt der Verein nur auf seiner Website. Das Matching muss mit diesen Daten auskommen.</li>
+              <li>Interne Vermittlungsinfos dürfen nicht veröffentlicht werden. Die Case Study zeigt nur, was öffentlich ist.</li>
+              <li>Pfotenfinder duzt, passend zum Verein.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Finales Design -->
+    <section class="section container" aria-labelledby="s10">
+      <div class="section-head reveal">
+        <p class="eyebrow">10 · Finales Design</p>
+        <h2 id="s10" class="display-2">Zwei Prototypen, ein Produkt.</h2>
+        <p class="lead">Pfotenfinder als eigenständiges Konzept und als Modul im Branding eines echten Vereins. Die Vereinsversion zeigt, dass die Strategie „Modul statt Portal“ in der Praxis trägt.</p>
+        <div class="btn-row">
+          <a class="btn btn--soft btn--icon" href="https://www.figma.com/design/ee37ScGUuPym2idbYFWzPa/Sarah-B%C3%B6ning---Pfotenfinder" target="_blank" rel="noopener noreferrer">HiFi-Prototyp (Figma) <span class="btn__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <a class="btn btn--soft btn--icon" href="https://www.figma.com/design/CoPD6NBxMmZRM2KNFoxuwn/Sarah-B%C3%B6ning---Pfotenfinder-EHfS?node-id=510-2453&amp;p=f" target="_blank" rel="noopener noreferrer">Vereinsversion (Figma) <span class="btn__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        </div>
+      </div>
+      <h3 class="kicker screens-title" style="font-family:var(--font-body);margin-top:0">Der Happy Path in fünf Screens</h3>
+      <ol class="screens reveal" tabindex="0" aria-label="Screens des Happy Path, horizontal scrollbar">
+        <li><figure>
+          <img src="../assets/img/pfotenfinder-screen-alltag.webp" width="402" height="874" loading="lazy" alt="Fragebogen Schritt 1 von 3, „Erzähl uns von deinem Alltag“: Auswahlfelder zu Wohnsituation, Alter und Abwesenheit an Werktagen, Checkboxen dazu, wer noch im Haushalt lebt, Buttons Abbrechen und Weiter">
+          <figcaption><strong>Alltag zuerst</strong>Drei kurze Schritte mit sichtbarem Fortschritt, vor dem ersten Tierfoto. Die Angaben bleiben auf dem Gerät, bis eine Anfrage rausgeht.</figcaption>
+        </figure></li>
+        <li><figure>
+          <img src="../assets/img/pfotenfinder-screen-erfahrung.webp" width="402" height="874" loading="lazy" alt="Fragebogen Schritt 2 von 3, „Deine Erfahrung“: Fragen nach bisherigem Hund und Tierschutztier, Mehrfachauswahl zu Erfahrungen wie Angsthund oder Herdenschutzhund mit kurzer Erklärung der Begriffe, Frage zur Hundeschule">
+          <figcaption><strong>Fachbegriffe erklärt</strong>Was ein Angsthund oder Herdenschutzhund ist, steht direkt an der Frage. So schätzt sich niemand aus Unwissen falsch ein.</figcaption>
+        </figure></li>
+        <li><figure>
+          <img src="../assets/img/pfotenfinder-screen-ergebnis.webp" width="402" height="874" loading="lazy" alt="Ergebnisliste „4 Tiere passen zu dir“, sortiert nach Match: Bello passt zu 92 %, Fiffi zu 88 %, Struppi zu 81 %, Idefix zu 74 %, jeweils mit einem Grund dafür und einem Hinweis, der dagegen sprechen könnte">
+          <figcaption><strong>Gründe statt Fotos</strong>Jedes Match zeigt, was passt und worauf man achten sollte, dazu die Entfernung zum Tierheim. Die Eignung steht vor dem Verlieben.</figcaption>
+        </figure></li>
+        <li><figure>
+          <img src="../assets/img/pfotenfinder-screen-detail.webp" width="402" height="874" loading="lazy" alt="Detailseite von Bello: Fotogalerie, „passt zu 92 % zu dir“ mit Hinweis, dass der Wert aus den eigenen Angaben berechnet wird, Eckdaten, Herkunft und Quelle der Angaben, Abschnitt „Das passt“ und Button „Bello anfragen“">
+          <figcaption><strong>Nachvollziehbares Match</strong>Woraus der Wert berechnet ist und von wem die Angaben stammen, steht direkt dabei. Das zahlt auf die riskanteste Annahme ein: Vertrauen in die Vorauswahl.</figcaption>
+        </figure></li>
+        <li><figure>
+          <img src="../assets/img/pfotenfinder-screen-anfrage.webp" width="402" height="874" loading="lazy" alt="Bestätigung „Danke – deine Anfrage für Bello ist angekommen“: Hinweis, dass sich das Tierheim innerhalb von etwa 5 Tagen meldet, drei nächste Schritte und Button „Weitere Matches ansehen“">
+          <figcaption><strong>Keine Funkstille</strong>Die Antworten gehen als Selbstauskunft mit. Danach ist klar, wann sich das Tierheim meldet und was als Nächstes passiert.</figcaption>
+        </figure></li>
+      </ol>
+      <p class="body-2" style="margin-top:32px;max-width:46em">Dazu gehören ein Kein-Treffer-Screen ohne Schuldgefühl, eine Merkliste ohne Konto und volle Kontrolle über die lokal gespeicherten Angaben.</p>
+
+      <h3 class="kicker case-sub">Drei Details gegen das Vertrauensproblem</h3>
+      <div class="grid-auto" style="--min:320px">
+        <div class="shell reveal"><div class="core"><h3 class="display-3">Ehrliches Matching statt Werbeprofil</h3><p class="body-2">Jede Ergebniskarte zeigt neben einer Stärke auch einen Vorbehalt, etwa „kann ca. 2 h alleine bleiben“. Das beantwortet die Kritik aus den Interviews, Profile zeigten Tiere „immer nur von der allerbesten Seite“.</p></div></div>
+        <div class="shell shell--b reveal"><div class="core"><h3 class="display-3">Begründung statt Blackbox</h3><p class="body-2">„Passt zu 92 %“ steht nie allein: Ein Hinweis erklärt die Berechnung, und die Detailseite übersetzt Tiermerkmale in Bezug auf die eigenen Angaben. Genau diese Übersetzung konnten Suchende laut H3 nicht selbst leisten.</p></div></div>
+        <div class="shell shell--c reveal"><div class="core"><h3 class="display-3">Aktualität sichtbar machen</h3><p class="body-2">„Angaben der Pfleger:innen im Tierheim Musterstadt · Stand: Oktober 2026“ beantwortet den Pain Point veralteter Fotos und Beschreibungen.</p></div></div>
+      </div>
+
+      <h3 class="kicker case-sub">Vereinsversion: Pfotenfinder für Ein Herz für Streuner</h3>
+      <p class="lead reveal" style="margin-bottom:32px">Die Vereinsversion ist kein Re-Skin, sondern eine Anpassung an echte Prozesse. Pfotenfinder sitzt auf der Startseite und der Hunde-Vermittlungsseite des Vereins, mobil wie am Desktop. Der Header steht im Vereinsgelb, Vereinslila trägt Links und Sekundäraktionen. Gezeigt werden echte Tiere wie Murphy, Matteo, Charlotte und Luddu, mit dem Hinweis „Mit freundlicher Unterstützung von Ein Herz für Streuner“.</p>
+      <ul class="compare">
+        <li class="reveal">
+          <div><span class="kicker">Generische Version</span><p>Fragebogen in 3 Schritten</p></div>
+          <div><span class="kicker">Vereinsversion</span><p>4 Schritte: Zuhause, Alltag, Erfahrung, Wünsche, mit bedingten Fragen, etwa zu Kindern oder einem weiteren Hund</p></div>
+          <div><span class="kicker">Warum</span><p>Bildet ab, was der Verein für eine Vermittlung tatsächlich wissen muss</p></div>
+        </li>
+        <li class="reveal">
+          <div><span class="kicker">Generische Version</span><p>„Anfrage senden“, Angaben gehen mit</p></div>
+          <div><span class="kicker">Vereinsversion</span><p>„Bereit für Murphy?“: Angaben zum Nachschlagen, dann „Zur Selbstauskunft“ beim Verein</p></div>
+          <div><span class="kicker">Warum</span><p>Keine Schnittstelle zu PetOffice, also eine ehrliche Übergabe statt einer vorgetäuschten Integration</p></div>
+        </li>
+        <li class="reveal">
+          <div><span class="kicker">Generische Version</span><p>Bestätigung „Anfrage angekommen“</p></div>
+          <div><span class="kicker">Vereinsversion</span><p>„Weiter beim Verein“ mit dem Ablauf danach (etwa 3 bis 6 Wochen)</p></div>
+          <div><span class="kicker">Warum</span><p>Der Prozess endet nicht bei Pfotenfinder, sondern beim Verein</p></div>
+        </li>
+      </ul>
+      <p class="body-2" style="margin-top:20px;max-width:46em">Auf dem Übergabe-Screen erklärt ein „Gut zu wissen“-Block in einfacher Sprache: Die Selbstauskunft ist keine Reservierung, und Adoption ist kein Kauf, die Schutzgebühr deckt einen Teil der Kosten für Impfungen, Chip, Kastration und Reise. Damit ist die Accessibility-Anforderung zu Fachbegriffen im finalen Design eingelöst.</p>
+    </section>
+
+    <!-- 11 Impact -->
+    <section class="section section--dark" aria-labelledby="s11">
+      <div class="blob" aria-hidden="true" style="top:-160px;left:-120px;width:520px;height:480px;background:var(--accent);opacity:.3"></div>
+      <div class="container relative">
+        <div class="section-head reveal">
+          <p class="eyebrow">11 · Impact</p>
+          <h2 id="s11" class="display-2">Eine Vermittlung zählt erst, wenn sie hält.</h2>
+          <p class="lead" style="color:var(--on-ink-2)">Pfotenfinder misst Erfolg daran, ob ein Tier nach sechs Monaten noch in seinem Zuhause lebt, nicht an Klicks.</p>
+        </div>
+        <div class="grid-auto" style="--min:320px">
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">North Star</h3><p>Anteil der über Pfotenfinder vermittelten Tiere, die nach 6 Monaten noch im neuen Zuhause leben</p><p style="font-size:14px">Messung: Rückmeldung der Vereine. Ziel: Baseline zuerst mit dem Partnerverein erheben.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">KPI 1: Fragebogen</h3><p>Abschlussrate des Eignungsfragebogens: Sessions, die alle Schritte abschließen</p><p style="font-size:14px">Messung: Funnel-Tracking, ergänzt um Session-Recordings an Abbruchstellen. Ziel: ≥ 70 %, mobil höchstens 10 Prozentpunkte unter Desktop.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">KPI 2: Selbsteinschätzung</h3><p>Zuwachs bei „Wie gut weißt du, welches Tier zu deinem Alltag passt?“ vor und nach dem Fragebogen</p><p style="font-size:14px">Messung: optionale Ein-Klick-Frage auf einer 5er-Skala, im Test mündlich. Ziel: ≥ 60 % schätzen sich um mindestens 1 Punkt besser ein.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Frühindikator</h3><p>Einstufung der Anfragen durch die Vermittler:innen als passend oder unpassend</p><p style="font-size:14px">Messung: Rückmeldung der Vereine. Ziel: gemeinsam mit dem Verein festlegen.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Activation</h3><p>Matching-Ergebnis verstehen und ein Tierprofil öffnen</p><p style="font-size:14px">Messung: Funnel-Schritt nach dem Fragebogen. Zielwert noch offen.</p></div></div>
+        </div>
+        <div class="insight reveal">
+          <p class="kicker" style="color:var(--accent)">Warum KPI 1 und 2</p>
+          <p>Bricht der Fragebogen ab oder löst er keine Erkenntnis aus, bleibt nur eine weitere Fotogalerie.</p>
+        </div>
+        <div class="grid-auto" style="--min:420px;margin-top:20px">
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Wie die North Star entstand</h3><p>Meine erste North Star war der Anteil der Anfragen, die über das Matching kommen. Das ist früh messbar, misst aber nur Nutzung, nicht Wirkung. Nach Feedback im Bootcamp habe ich auf das Outcome umgestellt. Der Matching-Anteil ist jetzt ein Frühindikator, kein Ziel.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Wirkungskette</h3><p>Heute entscheiden Menschen zuerst nach Optik und prüfen ihre Eignung danach. Mit Pfotenfinder wird die Eignung bewusst, bevor das Foto bindet. Für Nutzer:innen heißt das: ein Familienmitglied, das sie nicht überfordert. Für Vereine: weniger Rückgaben, weniger Aussieben ungeeigneter Anfragen und mehr Kapazität für das nächste Tier.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Einordnung der Baseline</h3><p>Laut Powell et al. (2021) werden 9,2 % adoptierter Tiere innerhalb von sechs Monaten zurückgegeben, Hunde mit 16,3 % deutlich häufiger als Katzen. Die Studie stammt aus den USA, für Deutschland fehlt belastbare Forschung. Eine eigene Baseline mit dem Partnerverein wäre der erste Schritt eines echten Piloten.</p></div></div>
+          <div class="reveal"><div class="dark-card"><h3 class="display-3">Bisherige Evidenz</h3><p>Im MidFi-Test haben beide Personen den Flow ohne Abbruch abgeschlossen, die Anfrage in unter einer Minute gesendet und Hunde aktiv über die Match-Hinweise aussortiert. Ein realer Verein hat echte Tiere, sein Branding und die öffentliche Einbettung des Prototyps freigegeben.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 Learnings -->
+    <section class="section container" aria-labelledby="s12">
+      <div class="section-head reveal">
+        <p class="eyebrow">12 · Learnings &amp; nächste Schritte</p>
+        <h2 id="s12" class="display-2">Was ich mitnehme.</h2>
+        <p class="lead">Mein wertvollster Moment war eine widerlegte Hypothese. Hätte ich an H4 festgehalten, hätte ich ein weiteres Portal gebaut, genau das, was weder Suchende noch Vereine brauchen.</p>
       </div>
       <div class="grid-auto" style="--min:320px">
-        <div class="panel reveal"><h3 class="display-3">Emotion ist keine Schwäche</h3><p class="body-2">Dass Menschen mit dem Herzen wählen, ist eine Randbedingung für das Design, kein Fehler, den man wegdesignt. Also kommt die Eignung einfach vor das Verlieben.</p></div>
-        <div class="panel panel--b reveal"><h3 class="display-3">Widerlegt ist auch ein Ergebnis</h3><p class="body-2">Die Annahme, Informationen seien zu verstreut, hat die Umfrage nicht gestützt. Gut so: Sie hätte mich zum falschen Produkt geführt.</p></div>
-        <div class="panel panel--c panel--ink reveal"><h3 class="display-3">Als Nächstes</h3><ul class="list"><li>Usability-Test: Ist der Fragebogen zu lang? Bleibt das Vertrauen?</li><li>Kooperation mit Vereinen klären</li><li>Das Matching testbar machen</li><!-- TODO: Ergebnisse des Usability-Tests ergänzen --></ul></div>
+        <div class="panel reveal"><h3 class="display-3">Emotion ist eine Bedingung, kein Gegner</h3><p class="body-2">Die Blind-Date-Idee hätte das Problem elegant gelöst, auf dem Papier. Das Matching nutzt das Foto, setzt es aber an die richtige Stelle im Flow.</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">System vor Politur</h3><p class="body-2">MidFi v2 sah fertig aus, hatte aber kein Fundament. Heute würde ich Tokens und Typo-Skala schon beim Übergang zu MidFi anlegen und mir die Aufräumrunde sparen.</p></div>
+        <div class="panel panel--c reveal"><h3 class="display-3">Retrospektive Daten haben Grenzen</h3><p class="body-2">76 der 84 relevanten Befragten hatten ihr Tier schon, nur 8 waren noch in der Entscheidung. Für Eignungszweifel vor der Adoption brauche ich nächstes Mal gezielt Menschen mitten in der Suche.</p></div>
+        <div class="panel reveal"><h3 class="display-3">Echte Constraints machen bessere Entscheidungen</h3><p class="body-2">Keine PetOffice-Schnittstelle, keine internen Infos, Daten nur auf der Website: Die Zusammenarbeit mit dem Verein hat aus einem Konzept ein Produkt gemacht, das in der echten Welt eingebaut werden kann.</p></div>
+        <div class="panel panel--b reveal"><h3 class="display-3">Den Testaufbau vorher festziehen</h3><p class="body-2">Im MidFi-Test waren Skalen unterschiedlich verankert, eine Person kam nicht aus der Zielgruppe, und eine falsche Prototyp-Version lief. Daraus wurden vier Methodik-Tickets und eine Checkliste. Und: Begriffe aus Sicht der Zielgruppe wählen, „Passung“ war mein Projektvokabular, nicht ihres.</p></div>
+        <div class="panel panel--c panel--ink reveal">
+          <h3 class="display-3">Als Nächstes</h3>
+          <p class="body-2">Zuerst die vorbereitete HiFi-v3-Runde, danach ein Pilot mit Ein Herz für Streuner, der eine Baseline der Rückgabequote erhebt. Ohne Ausgangswert lässt sich die North Star Metric nicht bewerten.</p>
+        </div>
+      </div>
+      <div class="panel reveal" style="margin-top:20px">
+        <h3 class="kicker" style="font-family:var(--font-body)">Weitere Schritte</h3>
+        <ul class="dots">
+          <li><span><strong>Matching mit Vermittler:innen validieren.</strong> Stimmen erfahrene Vermittler:innen den vorgeschlagenen Paarungen zu? Das prüft die Qualität des Algorithmus, bevor echte Menschen ihm vertrauen.</span></li>
+          <li><span><strong>Anfragen flexibler machen.</strong> Anfragen für mehrere Tiere ermöglichen und eine Anfrage auf ein anderes Tier umlenken, wenn das erste schon vermittelt ist.</span></li>
+          <li><span><strong>Segment 3 erschließen.</strong> Unentschlossene Einsteiger:innen brauchen Planbarkeit und Klarheit zur Vorgeschichte, gerade bei Tieren aus dem Auslandstierschutz.</span></li>
+          <li><span><strong>Vereinsseite gestalten.</strong> Wie pflegen Vereine Tiermerkmale so, dass das Matching gute Daten bekommt, ohne Mehraufwand neben ihrer Website?</span></li>
+          <li><span><strong>Offene Hypothesen testen.</strong> H1, H5 und H6 mit einem passenden Instrument untersuchen, etwa einem Tagebuch während der Suchphase.</span></li>
+        </ul>
       </div>
     </section>
 
