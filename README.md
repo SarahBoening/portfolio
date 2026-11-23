@@ -6,13 +6,14 @@ Ein Push auf `main` lädt alles per SFTP zu Strato (siehe `.github/workflows/dep
 ## Aufbau
 
 ```
-index.html                    Startseite (DE)
+index.html                    Startseite (DE), zeigt die zwei besten Case Studies
+projekte.html                 Projektübersicht (DE), listet alle Case Studies
 projekte/pfotenfinder.html    Case Study (DE)
 lebenslauf.html               Lebenslauf (DE)
 impressum.html                Impressum (DE, rechtlich maßgeblich)
 datenschutz.html              Datenschutz (DE, rechtlich maßgeblich)
 en/                           dieselben Seiten auf Englisch
-  index.html, projects/pfotenfinder.html, cv.html, legal-notice.html, privacy.html
+  index.html, projects.html, projects/pfotenfinder.html, cv.html, legal-notice.html, privacy.html
 assets/css/style.css          alle Styles, Design-Tokens ganz oben
 assets/js/theme-init.js       setzt Hell/Dunkel vor dem ersten Zeichnen
 assets/js/main.js             Hell/Dunkel-Knopf, mobiles Menü, Einblenden beim Scrollen
@@ -21,7 +22,7 @@ assets/img/                   Bilder und Favicon
 ```
 
 Jede deutsche Seite hat ein englisches Gegenstück; der DE/EN-Schalter im Header verlinkt sie gegenseitig.
-Wenn du Header oder Footer änderst, bitte in allen zehn Seiten.
+Wenn du Header oder Footer änderst, bitte in allen zwölf Seiten.
 
 ## Gestaltung
 
