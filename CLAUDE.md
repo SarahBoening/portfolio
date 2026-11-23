@@ -12,17 +12,18 @@ A push to `main` triggers `.github/workflows/deploy_strato.yml`, which uploads `
 
 ## Page structure: every page exists twice
 
-The 5 German pages at the root and in `projekte/` each have an English twin under `en/`, and the DE/EN switch in each header links the pair:
+The 6 German pages at the root and in `projekte/` each have an English twin under `en/`, and the DE/EN switch in each header links the pair:
 
 | DE | EN |
 |---|---|
 | `index.html` | `en/index.html` |
+| `projekte.html` | `en/projects.html` |
 | `projekte/pfotenfinder.html` | `en/projects/pfotenfinder.html` |
 | `lebenslauf.html` | `en/cv.html` |
 | `impressum.html` | `en/legal-notice.html` |
 | `datenschutz.html` | `en/privacy.html` |
 
-- Content changes must be mirrored in both languages. Header and footer are duplicated by hand in all ten files, so a change to either goes into all ten (there are no includes or templates).
+- Content changes must be mirrored in both languages. Header and footer are duplicated by hand in all twelve files, so a change to either goes into all twelve (there are no includes or templates).
 - Asset paths are relative and depend on depth: `assets/...` at the root, `../assets/...` in `projekte/` and `en/`, and `../../assets/...` in `en/projects/`. Check this when copying markup between pages.
 - `impressum.html` and `datenschutz.html` (and their EN twins) are legally relevant. The privacy page is a draft with open `TODO` comments about STRATO details.
 
@@ -30,7 +31,9 @@ The 5 German pages at the root and in `projekte/` each have an English twin unde
 
 - All styles are in `assets/css/style.css`, which is organized into numbered sections (fonts, tokens, base, layout, components, page sections, motion, responsive) listed in the header comment.
 - Fonts: Quicksand for text, Fredoka for headings (`--font-display`). Pages with `<body class="case">` (the two Pfotenfinder case studies) switch `--font-display` to Kalam, matching the app. `.brand` and the mobile menu use `--font-site` so the header looks the same everywhere.
-- Homepage order is hero, case studies (`#projekte` / `#work`), Werdegang, skills, about, contact. In every header nav "Projekte"/"Work" comes first.
+- Homepage order is hero, case studies (`#projekte` / `#work`), Werdegang, skills, about, contact. In every header nav "Projekte"/"Work" comes first and links to the overview page (`projekte.html` / `en/projects.html`), not to a homepage anchor.
+- Case studies: the overview page lists **all** of them as `.project-card` entries; the homepage shows only the two best as large `.project` cards, followed by the "Alle Projekte ansehen" / "View all projects" button. A new case study therefore needs a detail page pair, a card on the overview page (DE + EN), and, if it is one of the two best, a `.project` article on the homepage (DE + EN).
+- Whole cards are clickable through `.stretched-link` (its `::after` covers `.project__inner` / `.project-card > .core`). Put it on the one real link in the card (the "Case Study lesen" button, with a `.visually-hidden` project name) so there are no duplicate links.
 - The hero avatar is a pixel-art SVG (`assets/img/sarah-pixel.svg`, 32×44 grid, `crispEdges`). The "Über mich"/"About me" card shows `assets/img/sarah-garten.svg` (68×51 grid: Sarah with gardener hat and her two dogs), decorative with `alt=""`. The three "Mein Weg"/"Journey" cards each show Sarah in another outfit (`sarah-weg-forschung.svg`, `-entwicklung.svg`, `-design.svg`, 32×44 grid) next to the number, inside `.card-top`, also `alt=""`. The big "KI-gestützte Arbeit" card shows `sarah-denken.svg` (thinking pose, replaces the old sparkle icon) and the contact panel shows `sarah-winken.svg` above the heading; both `alt=""`.
 - Design tokens are CSS variables in `:root`. Dark mode overrides the same variables, so add new colors as tokens rather than hard-coded values.
 - Cards use a double border: `.shell` (outer) wraps `.core` (inner), with radius variants `.shell--b` and `.shell--c`.
@@ -44,4 +47,4 @@ No cookies, tracking, or external requests: fonts are self-hosted, and no third-
 
 ## Open items
 
-The `TODO` markers in the HTML are the work list: the "Über mich" personal sentence, the next case study, usability-test results in the Pfotenfinder case study, and the STRATO details in the privacy pages.
+The `TODO` markers in the HTML are the work list: the "Über mich" personal sentence, the next case study (also replaces the "In Arbeit" placeholder card on the overview page, DE + EN), the Pfotenfinder case study's open items (results of the HiFi-v3 usability round, WCAG contrast values of the core colour pairs), and the STRATO details in the privacy pages.

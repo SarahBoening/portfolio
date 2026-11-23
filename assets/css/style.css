@@ -419,6 +419,27 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .stats--insight { grid-template-columns: minmax(0, 1fr); }
 .stats--insight dd { font-size: clamp(20px, 1.8vw, 24px); line-height: 1.3; text-wrap: balance; }
 
+/* Ganze Karte klickbar: der Link (.stretched-link) spannt sich über .project__inner bzw. .core.
+   Die Hover-Bewegung liegt auf dem Innenteil, weil .reveal das transform der Schale überschreibt. */
+.project__inner, .project-card > .core { position: relative; transition: transform 0.8s var(--ease); }
+.stretched-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.stretched-link.btn:hover, .stretched-link.btn:active { transform: none; } /* sonst wäre der Button der Bezugsrahmen für ::after */
+.project__inner:has(.stretched-link:hover), .project-card > .core:has(.stretched-link:hover) { transform: translateY(-4px); }
+@supports selector(:has(a)) {
+  .stretched-link:focus-visible { outline: none; }
+  .project__inner:has(.stretched-link:focus-visible), .project-card > .core:has(.stretched-link:focus-visible) { outline: 2px solid var(--accent); outline-offset: 4px; }
+}
+
+/* Projektübersicht: kompakte Karten, eine je Case Study */
+.project-list { list-style: none; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr)); }
+.project-card > .core { padding: 0; gap: 0; overflow: hidden; align-items: stretch; }
+.project-card__media { aspect-ratio: 16 / 10; overflow: hidden; padding: 32px 0 0 32px; background: var(--azure); }
+.project-card__media img { display: block; width: 100%; height: auto; border-top-left-radius: 16px; box-shadow: 0 30px 70px -20px rgba(29, 34, 48, 0.35); }
+.project-card__body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: clamp(24px, 3vw, 36px); }
+.project-card__body .btn { margin-top: auto; }
+.project-card--soon { align-self: start; }
+.project-card--soon > .core { padding: clamp(24px, 3vw, 36px); gap: 14px; justify-content: center; background: var(--surface-tint); box-shadow: inset 0 0 0 2px var(--hair); }
+
 /* Bento */
 .bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px; }
 .bento > :nth-child(1) { grid-column: span 7; grid-row: span 2; }
@@ -458,6 +479,17 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 .hypo p { flex: 1 1 420px; }
 .badge { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 700; background: var(--accent); color: var(--on-accent); }
 .badge--partial { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); }
+.badge--refuted { background: var(--ink); color: var(--on-ink); }
+.badge--open { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 2px var(--deco); }
+.hypo small { display: block; margin-top: 6px; font-size: 15px; font-weight: 600; color: var(--muted); }
+/* Vergleichszeilen (Idee/Entscheidung, Vorher/Nachher/Trade-off): Spalten brechen von selbst um */
+.compare { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.compare li { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px 32px; padding: 24px 28px; border-radius: 32px 24px 28px 20px; background: var(--surface-tint); }
+.section--tint .compare li { background: var(--surface); box-shadow: 0 0 0 1px var(--hair); }
+.compare .kicker { display: block; margin-bottom: 6px; }
+.compare p { font-size: 16px; line-height: 1.6; color: var(--text-2); }
+.compare strong { color: var(--text); }
+.case-sub { font-family: var(--font-body); margin: 72px 0 24px; }
 .big-number { font-family: var(--font-display); font-size: 48px; font-weight: 600; color: var(--accent); line-height: 1; }
 .section--dark { position: relative; overflow: hidden; background: var(--ink); color: var(--on-ink); border-radius: 112px 72px 112px 72px; }
 .section--dark .eyebrow { background: rgba(127, 127, 127, 0.14); color: var(--on-ink); }
