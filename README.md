@@ -40,8 +40,4 @@ Wenn du Header oder Footer änderst, bitte in allen zwölf Seiten.
 
 ## Offen (im Code als `TODO` markiert)
 
-- [ ] Persönlicher Satz im Abschnitt „Über mich“
-- [ ] Nächste Case Study
-- [ ] Ergebnisse des Usability-Tests in der Pfotenfinder-Case-Study
-- [ ] Datenschutzerklärung prüfen lassen, Firmierung und Anschrift von STRATO und die Speicherdauer der Logfiles ergänzen
-- [ ] Postfach `info@sarahboening.de` einrichten, falls noch nicht geschehen
+- [ ] Nächste Case Study‚
